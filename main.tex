@@ -1,0 +1,107 @@
+% !TeX spellcheck = sv_SE
+%http://www.cs.put.poznan.pl/ksiek/latexmath.html
+%https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics
+%http://www.maths.lth.se/matematiklth/personal/magnusa/kurser/endim-ht2015/B1/kurspmB1ht15.pdf
+
+\documentclass[a4paper]{article} 
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage[swedish]{babel} 
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{systeme}
+\usepackage{environ}
+\usepackage[top=1in, bottom=1.25in, left=1.0in, right=1.25in]{geometry}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\newenvironment{task}[1]
+{
+	\begin{description}[align=right]
+		\item [#1]~~~~
+}{		%input
+	\end{description}
+}
+
+\newenvironment{linsys}[1]
+{
+	\let\oldarraycolsep\arraycolsep
+	\setlength\arraycolsep{0pt}
+	\left\{\begin{array}{#1}
+}{
+	\end{array} \right.
+	\setlength\arraycolsep{\oldarraycolsep}
+}
+
+\newenvironment{detmat}
+{
+	\left|\begin{matrix}
+}{
+	\end{matrix}\right|
+}
+
+\newenvironment{mat}
+{
+	\left(\begin{matrix}
+	}{
+	\end{matrix}\right)
+}
+
+\newcommand{\adj}{\text{adj}}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\newcommand{\vek}[1]{\overrightarrow{#1}}
+
+\newcommand\varpm{\mathbin{\vcenter{\hbox{%
+				\oalign{\hfil$\scriptstyle+$\hfil\cr
+					\noalign{\kern-.5ex}					
+					$\scriptscriptstyle({-})$\cr}%
+			}}}}
+
+\newcommand{\taskref}[1]{\textbf{#1}}
+
+\newcommand{\chapter}[2]{\section*{Kapitel #1: #2}}
+
+\newcommand{\ans}{\textbf{Svar: }}
+\newcommand{\mproof}{\text{~~~~V.S.V}}
+\newcommand{\proof}{~~~~V.S.V}
+
+\DeclareMathOperator{\lra}{\Leftrightarrow}
+\DeclareMathOperator{\ra}{\Rightarrow}
+
+\let\*\relax
+\DeclareMathOperator{\*}{\cdot}
+
+\title{Tillämpad matematik - Linjära system\\ FMAF10} 
+\author{Emil Wihlander\\ dat15ewi@student.lu.se} 
+
+\begin{document} 
+\maketitle
+\pagebreak
+\input{chapters/1.tex}
+\pagebreak
+\input{chapters/2.tex}
+\pagebreak
+\input{chapters/3.tex}
+\pagebreak
+\input{chapters/4.tex}
+\pagebreak
+\input{chapters/5.tex}
+\pagebreak
+\input{chapters/6.tex}
+\pagebreak
+\input{chapters/7.tex}
+\pagebreak
+\input{chapters/8.tex}
+\pagebreak
+\input{chapters/9.tex}
+\pagebreak
+\input{chapters/10.tex}
+\pagebreak
+\input{chapters/11.tex}
+
+\end{document}
