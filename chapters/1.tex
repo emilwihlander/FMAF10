@@ -78,3 +78,26 @@ Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t
 	\end{align*}
 	\ans Amplitud: $2$ och fasförskjutning: $\frac{2\pi}{3}$
 \end{task}
+
+\begin{task}{1.4 b)}
+	låt $u(t)=A\sin(\omega t + \alpha)=A\sin\alpha\cos(\omega t)+A\cos\alpha\sin(\omega t)=-2\cos(\omega t)-4\sin(\omega t)$ där $A$ är amplituden och $\alpha$ är fasförskjutningen.
+	\begin{align*}
+	\begin{linsys}{rr}
+	A\sin\alpha=&-2 \\
+	A\cos\alpha=&-4
+	\end{linsys} \lra &
+	\sqrt{(A\sin\alpha)^2+(A\cos\alpha)^2}=\sqrt{(-2)^2+(-4)^2} \lra \\ \lra
+	& \sqrt{A^2}\sqrt{\sin\alpha^2+\cos\alpha^2}=\sqrt{4+16} \ra
+	A\sqrt{1}=\sqrt{20} \lra
+	A=2\sqrt{5}
+	\end{align*}
+	\begin{align*}
+	\tan\alpha= &
+	\frac{\sin\alpha}{\cos\alpha}=
+	\frac{A\sin\alpha}{A\cos\alpha}=
+	\frac{-2}{-4} \ra \\ \ra
+	\alpha= &
+	\arctan\frac{1}{2}+\pi~~(+\pi \text{ ty } -4<0)
+	\end{align*}
+	\ans Amplitud: $2\sqrt{5}$ och fasförskjutning: $\arctan\frac{1}{2}+\pi$
+\end{task}
