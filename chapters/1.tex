@@ -1,17 +1,17 @@
 \chapter{1}{Svängningar och komplexa tal}
 \begin{task}{1.1 a)}
 Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t + \alpha)$ där $\omega$ är vinkelfrekvensen.
-\[u(t)=3\sin(2t-5) \Rightarrow \omega=2\]
-\[T=\frac{2\pi}{\omega} \Rightarrow T = \frac{2\pi}{2} = \pi\]
-\[f=\frac{1}{T} \Rightarrow f = \frac{1}{\pi}\]
+\[u(t)=3\sin(2t-5) \ra \omega=2\]
+\[T=\frac{2\pi}{\omega} \ra T = \frac{2\pi}{2} = \pi\]
+\[f=\frac{1}{T} \ra f = \frac{1}{\pi}\]
 \ans vinkelfrekvens: 2, period: $\pi$, frekvens: $\frac{1}{\pi}$
 \end{task}
 
 \begin{task}{b)}
 	Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t + \alpha)$ där $\omega$ är vinkelfrekvensen.
-	\[u(t)=50\sin(100\pi t+1) \Rightarrow \omega=100\pi\]
-	\[T=\frac{2\pi}{\omega} \Rightarrow T = \frac{2\pi}{100\pi} = \frac{1}{50}\]
-	\[f=\frac{1}{T} \Rightarrow f = 50\]
+	\[u(t)=50\sin(100\pi t+1) \ra \omega=100\pi\]
+	\[T=\frac{2\pi}{\omega} \ra T = \frac{2\pi}{100\pi} = \frac{1}{50}\]
+	\[f=\frac{1}{T} \ra f = 50\]
 	\ans vinkelfrekvens: $100\pi$, period: $\frac{1}{50}$, frekvens: 50
 \end{task}
 
@@ -38,9 +38,43 @@ Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t
 	\begin{align*}
 	u(t)= &
 	6\sin(3t+\frac{\pi}{4})=
-	6(\sin(3t)\cos(\frac{\pi}{4})+\cos(3t)\sin(\frac{\pi}{4}))= \\
-	= & 6\frac{1}{\sqrt{2}}\sin(3t)+6\frac{1}{\sqrt{2}}\cos(3t)=
+	6(\sin(3t)\cos(\frac{\pi}{4})+\cos(3t)\sin(\frac{\pi}{4}))= \\ =
+	& 6\frac{1}{\sqrt{2}}\sin(3t)+6\frac{1}{\sqrt{2}}\cos(3t)=
 	3\sqrt{2}\cos(3t)+3\sqrt{2}\sin(3t)
 	\end{align*}
-	\ans $a=b=3\sqrt{2}, \omega=3 \Rightarrow 3\sqrt{2}\cos(3t)+3\sqrt{2}\sin(3t)$
+	\ans $a=b=3\sqrt{2}, \omega=3 \ra 3\sqrt{2}\cos(3t)+3\sqrt{2}\sin(3t)$
+\end{task}
+
+\pagebreak
+\begin{task}{1.4 a)}
+	låt $u(t)=A\sin(\omega t + \alpha)=A\sin\alpha\cos(\omega t)+A\cos\alpha\sin(\omega t)=\sqrt{3}\cos(\omega t)-\sin(\omega t)$ där $A$ är amplituden och $\alpha$ är fasförskjutningen.
+	\begin{align*}
+		\begin{linsys}{rr}
+		A\sin\alpha=&\sqrt{3} \\
+		A\cos\alpha=&-1
+		\end{linsys} \lra &
+		\sqrt{(A\sin\alpha)^2+(A\cos\alpha)^2}=\sqrt{(\sqrt{3})^2+(-1)^2} \lra \\ \lra
+		& \sqrt{A^2}\sqrt{\sin\alpha^2+\cos\alpha^2}=\sqrt{4} \ra
+		A\sqrt{1}=2 \lra
+		A=2
+	\end{align*}
+	\begin{align*}
+		\tan\alpha= &
+		\frac{\sin\alpha}{\cos\alpha}=
+		\frac{A\sin\alpha}{A\cos\alpha}=
+		\frac{\sqrt{3}}{-1} \ra \\ \ra
+		\alpha= &
+		\arctan\frac{\sqrt{3}}{1}+\frac{\pi}{2}=
+		\frac{\pi}{6}+\frac{\pi}{2}=
+		\frac{2\pi}{3}
+	\end{align*}
+	eller:
+	\begin{align*}
+		u(t)= &
+		\sqrt{3}\cos(\omega t)-\sin(\omega t)=
+		2(\frac{\sqrt{3}}{2}\cos(\omega t)-\frac{1}{2}\sin(\omega t))= \\ =
+		& 2(\sin\frac{2\pi}{3}\cos(\omega t)+\cos\frac{2\pi}{3}\sin(\omega t))=
+		\sin(\omega t + \frac{2\pi}{3})
+	\end{align*}
+	\ans Amplitud: $2$ och fasförskjutning: $\frac{2\pi}{3}$
 \end{task}
