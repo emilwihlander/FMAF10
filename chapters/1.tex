@@ -219,3 +219,38 @@ Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t
 	\end{align*}
 	\ans $-\frac{5}{2}+i\frac{5\sqrt{3}}{2}$
 \end{task}
+
+\begin{task}{1.10 a)}
+	Låt $z=re^{i\phi}$
+	\begin{align*}
+		z^4+1=0 \lra 
+		&(re^{i\phi})^4=-1 \lra
+		r^4e^{i4\phi}=e^{\pi+2k\pi}, \quad k\in\mathbb{Z} \lra
+		\begin{cases}
+		4\phi=\pi+2k\pi, \quad k\in\mathbb{Z} \\
+		r^4=1
+		\end{cases} \lra \\ \lra
+		&\begin{cases}
+		\phi=\frac{\pi}{4}+\frac{k\pi}{2}, \quad k\in\mathbb{Z} \\
+		r=1
+		\end{cases}
+	\end{align*}
+	$k=\{0,1,2,3\}$ ger alla unika lösningar.
+	\[k=0\ra e^{\pi i/4} \quad
+	k=1\ra e^{3\pi i/4} \quad
+	k=2\ra e^{5\pi i/4} \quad
+	k=3\ra e^{7\pi i/4}\]
+	\ans $e^{\pi i/4},e^{3\pi i/4},e^{5\pi i/4},e^{7\pi i/4}$
+	\\ \\
+	Eller:
+	\\ \\
+	Använd $\sqrt{i}=(e^{\pi i/2})^{1/2}=e^{\pi i/4}=\frac{1}{\sqrt{2}}(1+i)$ och $\sqrt{-i}=(e^{-\pi i/2})^{1/2}=e^{-\pi i/4}=\frac{1}{\sqrt{2}}(1-i)$
+	\begin{align*}
+	z^4+1=0 \lra 
+	&z^4=-1 \lra
+	\sqrt{z^4}=\pm\sqrt{-1} \lra
+	z^2=\pm i \lra
+	\sqrt{z^2}=\pm\sqrt{\pm i} \lra \\ \lra
+	&z=\pm\frac{1}{\sqrt{2}}(1\pm i)=\frac{1}{\sqrt{2}}(\pm 1\pm i)
+	\end{align*}
+\end{task}
