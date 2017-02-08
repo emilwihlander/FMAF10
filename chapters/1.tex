@@ -366,3 +366,36 @@ Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t
 	
 	\ans $9.42e^{4.01i}$ eller $9.42e^{-2.27i}$ (pga period $2\pi$)
 \end{task}
+
+\begin{task}{1.15 a)}
+	Använd regeln $\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$
+	\begin{align*}
+		u(t)=
+		&A\sin(\omega t + \delta)=
+		A\sin\delta\cos\omega t + A\cos\delta\sin\omega t= \\ =
+		&22.4\cos\omega t + 11.3\sin\omega t \lra
+		\begin{cases}
+		A\sin\delta = 22.4 \\
+		A\cos\delta = 11.3
+		\end{cases} \lra \\ \lra
+		&\sqrt{(A\sin\delta)^2+(A\cos\delta)^2}=\sqrt{22.4^2+11.3^2} \lra \\ \lra
+		&\sqrt{A^2(\sin^2\delta+\cos^2\delta)}\approx 25.09 \lra
+		A\approx 25.09
+	\end{align*}
+	\begin{align*}
+	\tan\delta&=
+	\frac{\sin\delta}{\cos\delta}=
+	\frac{A\sin\delta}{A\cos\delta}=
+	\frac{22.4}{11.3} \\
+	\delta&=
+	\arctan\frac{22.4}{11.3}\approx 
+	1.10
+	\end{align*}
+	\[C=b+ai \lra
+	\begin{cases}
+	a = A\sin\delta \\
+	b = A\cos\delta
+	\end{cases} \lra
+	C= 11.3+22.4i\]
+	\ans $u(t)=25.09\sin(\omega t + 1.10)$, $11.3+22.4i$
+\end{task}
