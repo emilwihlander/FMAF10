@@ -221,7 +221,7 @@ Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t
 \end{task}
 
 \begin{task}{1.10 a)}
-	Låt $z=re^{i\phi}$
+	Låt $z=re^{i\phi}, \quad r \ge 0$
 	\begin{align*}
 		z^4+1=0 \lra 
 		&(re^{i\phi})^4=-1 \lra
@@ -236,11 +236,8 @@ Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t
 		\end{cases}
 	\end{align*}
 	$k=\{0,1,2,3\}$ ger alla unika lösningar.
-	\[k=0\ra e^{\pi i/4} \quad
-	k=1\ra e^{3\pi i/4} \quad
-	k=2\ra e^{5\pi i/4} \quad
-	k=3\ra e^{7\pi i/4}\]
-	\ans $e^{\pi i/4},e^{3\pi i/4},e^{5\pi i/4},e^{7\pi i/4}$
+	
+	\ans $e^{\pi i/4+k\pi i/2} \qquad k=\{0,1,2,3\}$
 	\\ \\
 	Eller:
 	\\ \\
@@ -253,4 +250,24 @@ Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t
 	\sqrt{z^2}=\pm\sqrt{\pm i} \lra \\ \lra
 	&z=\pm\frac{1}{\sqrt{2}}(1\pm i)=\frac{1}{\sqrt{2}}(\pm 1\pm i)
 	\end{align*}
+\end{task}
+
+\begin{task}{b)}
+	Låt $z=re^{\phi i}, \quad r \ge 0$
+	\begin{align*}
+		z^5=32 \lra
+		&(re^{\phi i})^5=32 \lra
+		r^5e^{5\phi i}=32e^{2k\pi i}, \quad k\in\mathbb{Z} \lra
+		\begin{cases}
+		5\phi=2k\pi, \quad k\in\mathbb{Z} \\
+		r^5=32
+		\end{cases} \lra \\ \lra
+		&\begin{cases}
+		\phi=\frac{2k\pi}{5}, \quad k\in\mathbb{Z} \\
+		r=2
+		\end{cases}
+	\end{align*}
+	$k=\{0,1,2,3,4\}$ ger alla unika lösningar.
+	
+	\ans $e^{2k\pi i/5} \qquad k=\{0,1,2,3,4\}$
 \end{task}
