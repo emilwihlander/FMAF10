@@ -399,3 +399,36 @@ Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t
 	C= 11.3+22.4i\]
 	\ans $u(t)=25.09\sin(\omega t + 1.10)$, $11.3+22.4i$
 \end{task}
+
+\begin{task}{b)}
+	Använd regeln $\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$
+	\begin{align*}
+	u(t)=
+	&A\sin(\omega t + \delta)=
+	A\sin\delta\cos\omega t + A\cos\delta\sin\omega t= \\ =
+	&5.19\sin\omega t - 3.14\cos\omega t \lra
+	\begin{cases}
+	A\cos\delta = 5.19 \\
+	A\sin\delta = -3.14
+	\end{cases} \lra \\ \lra
+	&\sqrt{(A\sin\delta)^2+(A\cos\delta)^2}=\sqrt{5.19^2+(-3.14)^2} \lra \\ \lra
+	&\sqrt{A^2(\sin^2\delta+\cos^2\delta)}\approx 6.07 \lra
+	A\approx 6.07
+	\end{align*}
+	\begin{align*}
+	\tan\delta&=
+	\frac{\sin\delta}{\cos\delta}=
+	\frac{A\sin\delta}{A\cos\delta}=
+	\frac{-3.14}{5.19} \\
+	\delta&=
+	\arctan\frac{-3.14}{5.19}\approx 
+	-0.54
+	\end{align*}
+	\[C=b+ai \lra
+	\begin{cases}
+	a = A\sin\delta \\
+	b = A\cos\delta
+	\end{cases} \lra
+	C= 5.19-3.14i\]
+	\ans $u(t)=6.07\sin(\omega t - 0.54)$, $5.19-3.14i$
+\end{task}
