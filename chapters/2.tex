@@ -46,3 +46,22 @@
 	
 	\ans $t(\theta(t)-\theta(t-1))+(t-1)(\theta(t-1)-\theta(t-2))$
 \end{task}
+
+\begin{task}{2.5}
+	\[p_b(t)=\frac{1}{b}(\theta(t)-\theta(t-b))\]
+	Om stegfunktioner finns som en faktor i en integral kan dessa ersätta integrationsgränserna eftersom de evaluerar till noll utanför intervallet.
+	\[\int_{-\infty}^{+\infty}\! (\theta(t-a)-\theta(t-b))t \, \mathrm{d}t =
+	\int_{a}^{b}\! t \, \mathrm{d}t\]
+	Lös med hjälp av ovanstående samband:
+	\begin{align*}
+	\int_{-\infty}^{+\infty}\! p_b(t)e^{-st} \, \mathrm{d}t =
+	&\int_{-\infty}^{+\infty}\!\frac{1}{b}(\theta(t)-\theta(t-b))e^{-st} \, \mathrm{d}t =
+	\int_{0}^{b}\!\frac{1}{b}e^{-st} \, \mathrm{d}t = \\ =
+	&\left[-\frac{1}{sb}e^{-st}\right]_{0}^{b}=
+	-\frac{e^{-sb}}{sb}-\left(-\frac{1}{sb}\right)=
+	\frac{1-e^{-sb}}{sb}\cond{s\neq0}
+	\end{align*}
+	Om $s=0$:
+	\[\int_{-\infty}^{+\infty}\! p_b(t)\*1 \, \mathrm{d}t =1 \qquad\text{enligt def., se boken}\]'
+	\ans $\int_{-\infty}^{+\infty}\! p_b(t)e^{-st} \, \mathrm{d}t =\frac{1}{sb}(1-e^{-sb})\cond{s\neq0}$ och $1\cond{s=0}$
+\end{task}
