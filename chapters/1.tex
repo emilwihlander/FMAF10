@@ -452,5 +452,15 @@ Allmänna funktionen för odämpad harmonisk svängning är $u(t)=A\sin(\omega t
 	\end{align*}
 	Partikulärlösning ($C=0$): $\frac{1}{2+s}e^{st} \cond{s\neq-2}$
 	
-	\ans $\frac{1}{2+s}e^{st} \cond{s\neq-2}$
+	\ans $y=\frac{1}{2+s}e^{st} \cond{s\neq-2}$
+\end{task}
+
+\begin{task}{1.17}
+	Låt $s=i\omega$ och då ger \taskref{1.16} $y=\frac{1}{2+i\omega}e^{i\omega t}$ och eftersom $\sin\omega t=\Im e^{i\omega t}$:
+	\begin{align*}
+	y=\Im\left(\frac{1}{2+i\omega}e^{i\omega t}\right)=
+	\Im\left(\frac{2-i\omega}{\omega^2+4}(\cos\omega t + i\sin\omega t)\right)=
+	\frac{1}{\omega^2+4}(2\sin\omega t + \omega\sin\omega t)
+	\end{align*}
+	\ans $y=\frac{1}{\omega^2+4}(2\sin\omega t + \omega\sin\omega t)$
 \end{task}
