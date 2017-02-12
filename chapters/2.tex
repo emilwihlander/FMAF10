@@ -139,23 +139,43 @@
 	\[f(t)= t^2(\theta(t)-\theta(t-1))+(2-t)(\theta(t-1)-\theta(t-2))\]
 	Eftersom funktionen saknar språng är ($\frac{d}{dt}t^2=2t$ och $\frac{d}{dt}(2-t)=-1$):
 	\[f'(t)=f_p'(t)=2t(\theta(t)-\theta(t-1))-(\theta(t-1)-\theta(t-2))\]
-	Eftersom $f'(t)$ har språng i $t=1$ och $t=2$ måste storleken på dessa beräknas:
-	\[t=1 \ra \abs{2\*1-(-1)}=3\]
-	\[t=2 \ra \abs{-1-0}=1\]
+	Eftersom $f'(t)$ har språng i $t=1$ och $t=2$ måste storleken på dessa beräknas (högra funktionen minus den vänstra):
+	\[t=1 \ra (-1)-2\*1=-3\]
+	\[t=2 \ra 0-(-1)=1\]
 	$f'(t)$ är deriverbar i alla punkter utom $t=\{0,1,2\}$, $t=0$ saknar dock språng.
-	\[f''(t)=f_p''(t)+b_1\delta(t-a_1)+b_2\delta(t-a_2) \qquad\text{där}\qquad a_1=1,\;b_1=3,\;a_2=2,\;b_2=1\]
+	\[f''(t)=f_p''(t)+b_1\delta(t-a_1)+b_2\delta(t-a_2) \qquad\text{där}\qquad a_1=1,\;b_1=-3,\;a_2=2,\;b_2=1\]
 	$\frac{d}{dt}2t=2$ och $\frac{d}{dt}(-1)=0$:
 	\begin{align*}
 	f''(t)=
-	&2(\theta(t)-\theta(t-1))+0\*(\theta(t-1)-\theta(t-2))+3\delta(t-1)+1\*\delta(t-2)= \\ =
-	&2(\theta(t)-\theta(t-1))+3\delta(t-1)+\delta(t-2)
+	&2(\theta(t)-\theta(t-1))+0\*(\theta(t-1)-\theta(t-2))-3\delta(t-1)+1\*\delta(t-2)= \\ =
+	&2(\theta(t)-\theta(t-1))-3\delta(t-1)+\delta(t-2)
 	\end{align*}
 	\ans 
 	\[f'(t)=2t(\theta(t)-\theta(t-1))-(\theta(t-1)-\theta(t-2))\]
-	\[f''(t)=2(\theta(t)-\theta(t-1))+3\delta(t-1)+\delta(t-2)\]
+	\[f''(t)=2(\theta(t)-\theta(t-1))-3\delta(t-1)+\delta(t-2)\]
 \end{task}
 
 \begin{task}{2.10 a)}
 	Sinus med amplitud 2 och vinkelfrekvensen 2, samt från 0 till $\pi/2$:
 	\[f(t)=2\sin 2t(\theta(t)-\theta(t-\pi/2))\]
+\end{task}
+
+\begin{task}{b)}
+	Använd sats 2.1 (s. 22):
+	\[f(t)= 2\sin 2t(\theta(t)-\theta(t-\pi/2))\]
+	Eftersom funktionen saknar språng är ($\frac{d}{dt}2\sin 2t=4\cos2t$):
+	\[f'(t)=f_p'(t)=4\cos2t(\theta(t)-\theta(t-\pi/2))\]
+	Eftersom $f'(t)$ har språng i $t=0$ och $t=\pi/2$ måste storleken på dessa beräknas (högra funktionen minus den vänstra):
+	\[t=0 \ra 4\cos(2\*0)-0=4\]
+	\[t=\pi/2 \ra 0-4\cos(2\*\pi/2)=4\]
+	$f'(t)$ är deriverbar i alla punkter utom $t=\{0,\pi/2\}$.
+	\[f''(t)=f_p''(t)+b_1\delta(t-a_1)+b_2\delta(t-a_2) \qquad\text{där}\qquad a_1=0,\;b_1=4,\;a_2=\pi/2,\;b_2=4\]
+	$\frac{d}{dt}4\cos2t=-8\sin2t$:
+	\begin{align*}
+	f''(t)=
+	&-8\sin2t(\theta(t)-\theta(t-\pi/2))+4\delta(t)+4\delta(t-\pi/2)
+	\end{align*}
+	\ans 
+	\[f'(t)=4\cos2t(\theta(t)-\theta(t-\pi/2))\]
+	\[f''(t)=-8\sin2t(\theta(t)-\theta(t-\pi/2))+4\delta(t)+4\delta(t-\pi/2)\]
 \end{task}
