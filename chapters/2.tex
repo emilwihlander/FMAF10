@@ -251,3 +251,19 @@
 	\end{align*}
 	\ans $e^t(1-\theta(t))+\theta(t)$
 \end{task}
+
+\begin{task}{d)}
+	Använd sambandet på s. 17:
+	\begin{align*}
+	&\int_{-\infty}^{t} \! e^{\tau}\theta(1-\tau) \, d\tau =
+	\int_{-\infty}^{t} \! e^{\tau}(1-\theta(\tau-1)) \, d\tau =
+	\int_{-\infty}^{t} \! e^{\tau} \, d\tau - \int_{-\infty}^{t} \! e^{\tau}\theta(\tau-1) \, d\tau= \\ =
+	&\left[e^{\tau}\right]_{-\infty}^t - \left(\int_{1}^t\! e^{\tau} \, d\tau\right)\theta(t-1)=
+	e^t-\overbrace{e^{-\infty}}^0-\left(\left[e^{\tau}\right]_{1}^t\right)\theta(t-1)= \\ =
+	&e^t-\left(e^{t}-e^{1}\right)\theta(t-1)=
+	e^t-e^{t}\theta(t-1)+e\theta(t-1)= \\ =
+	&e^t(1-\theta(t-1))+e\theta(t-1)=
+	e^t\theta(1-t)+e\theta(t-1)
+	\end{align*}
+	\ans $e^t\theta(1-t)+e\theta(t-1)$
+\end{task}
