@@ -179,3 +179,19 @@
 	\[f'(t)=4\cos2t(\theta(t)-\theta(t-\pi/2))\]
 	\[f''(t)=-8\sin2t(\theta(t)-\theta(t-\pi/2))+4\delta(t)+4\delta(t-\pi/2)\]
 \end{task}
+
+\begin{task}{2.11}
+	Beskriv $\abs{x}$ med hjälp av stegfunktioner:
+	\[f(x) = \abs{x} = -x(1-\theta(x))+x\theta(x)\]
+	Eftersom funktionen saknar språng är ($\frac{d}{dx}x=1$):
+	\[f'(x)=f_p'(x) = -1\*(1-\theta(x))+1\*\theta(x) = -1+\theta(x)+\theta(x) = 2\theta(x)-1\]
+	Eftersom $f'(t)$ har språng i $t=0$ måste storleken på denna beräknas (högra funktionen minus den vänstra):
+	\[x=0 \ra (2-1)-(-1)=2\]
+	$f'(t)$ är deriverbar i alla punkter utom $t=0$.
+	\[f''(x)=f_p''(x)+b\delta(x-a)\qquad\text{där}\qquad a=0,\;b=2\]
+	$\frac{d}{dt}1=0$:
+	\[f''(x) = -0\*(1-\theta(x))+0\*\theta(x)+2\delta(x-0)=2\delta(x)\]
+	\ans 
+	\[f'(t)=2\theta(x)-1\]
+	\[f''(t)=2\delta(x)\]
+\end{task}
