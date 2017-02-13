@@ -267,3 +267,16 @@
 	\end{align*}
 	\ans $e^t\theta(1-t)+e\theta(t-1)$
 \end{task}
+
+\begin{task}{2.14 a)}
+	Låt $f(t)=e^{2t}\theta(t)$, använd sambandet på s. 17:
+	\begin{align*}
+	F(t)=
+	&\int \! e^{2t}\theta(t) \, dt=
+	\theta(t)\int_{0}^{t} \! e^{2t} \, dt+C=
+	\theta(t)\left[\frac{1}{2}e^{2t}\right]_{0}^{t}+C= \\ =
+	&\frac{1}{2}(e^{2t}-e^{2\*0})\theta(t)+C=
+	\frac{1}{2}(e^{2t}-1)\theta(t)+C
+	\end{align*}
+	\ans $F(t)=\frac{1}{2}(e^{2t}-1)\theta(t)+C$
+\end{task}
