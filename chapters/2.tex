@@ -321,3 +321,17 @@
 	\end{align*}
 	\ans $F(t)=\frac{1}{2}\left(t^2-9\right)\theta(t-3)+C$
 \end{task}
+
+\begin{task}{e)}
+	Låt $f(t)=\sin t\theta(t-\pi)+\delta(t-1)$:
+	\begin{align*}
+	F(t)=
+	&\int \! \sin t\theta(t-\pi)+\delta(t-1) \, dt=
+	\int \! \sin t\theta(t-\pi) \, dt + \int \! \delta(t-1) \, dt= \\ =
+	&\theta(t-\pi)\int_{\pi}^{t} \! \sin t \, dt+\theta(t-1)+C=
+	\theta(t-\pi)\left[-\cos t\right]_{\pi}^{t}+\theta(t-1)+C= \\ =
+	&\left(-\cos t-(-\cos \pi)\right)\theta(t-\pi)+\theta(t-1)+C= \\ =
+	&-\left(\cos t+1\right)\theta(t-\pi)+\theta(t-1)+C
+	\end{align*}
+	\ans $F(t)=-\left(\cos t+1\right)\theta(t-\pi)+\theta(t-1)+C$
+\end{task}
