@@ -269,7 +269,7 @@
 \end{task}
 
 \begin{task}{2.14 a)}
-	Låt $f(t)=e^{2t}\theta(t)$, använd sambandet på s. 17:
+	Låt $f(t)=e^{2t}\theta(t)$:
 	\begin{align*}
 	F(t)=
 	&\int \! e^{2t}\theta(t) \, dt=
@@ -282,7 +282,7 @@
 \end{task}
 
 \begin{task}{b)}
-	Låt $f(t)=e^{2t}\theta(t)$, använd sambandet på s. 17:
+	Låt $f(t)=(t-1)\theta(t)$:
 	\begin{align*}
 	F(t)=
 	&\int \! (t-1)\theta(t) \, dt=
@@ -292,4 +292,19 @@
 	\left(\frac{t^2}{2}-t\right)\theta(t)+C
 	\end{align*}
 	\ans $F(t)=(\frac{t^2}{2}-t)\theta(t)+C$
+\end{task}
+
+\begin{task}{c)}
+	Låt $f(t)=(t-1)\theta(t-1)$:
+	\begin{align*}
+	F(t)=
+	&\int \! (t-1)\theta(t-1) \, dt=
+	\theta(t-1)\int_{1}^{t} \! t-1 \, dt+C=
+	\theta(t-1)\left[\frac{t^2}{2}-t\right]_{1}^{t}+C= \\ =
+	&\left(\frac{t^2}{2}-t-\left(\frac{1^2}{2}-1\right)\right)\theta(t-1)+C=
+	\left(\frac{t^2}{2}-t+\frac{1}{2}\right)\theta(t-1)+C= \\ =
+	&\frac{t^2-2t+1}{2}\theta(t-1)+C=
+	\frac{(t-1)^2}{2}\theta(t-1)+C
+	\end{align*}
+	\ans $F(t)=\frac{(t-1)^2}{2}\theta(t-1)+C$
 \end{task}
