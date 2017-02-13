@@ -195,3 +195,20 @@
 	\[f'(t)=2\theta(x)-1\]
 	\[f''(t)=2\delta(x)\]
 \end{task}
+
+\begin{task}{2.12}
+	Använd sambandet på s. 17:
+	\begin{align*}
+	v(t)=
+	&\int_{-\infty}^{t} \! \tau^a\theta(\tau) \, d\tau =
+	\begin{linsys}{ll}
+		0,& t\le0 \\
+		\displaystyle\int_0^t\! \tau^a \, d\tau,\quad & t>0
+	\end{linsys}=
+	\left(\int_0^t\! \tau^a \, d\tau\right)\theta(t)= \\ =
+	&\left(\left[\frac{\tau^{a+1}}{a+1}\right]_0^t\right)\theta(t)=
+	\left(\frac{t^{a+1}}{a+1}-\frac{0^{a+1}}{a+1}\right)\theta(t)=
+	\frac{t^{a+1}}{a+1}\theta(t)\cond{a>-1}
+	\end{align*}
+	\ans $\frac{t^{a+1}}{a+1}\theta(t)\cond{a>-1}$
+\end{task}
