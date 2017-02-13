@@ -224,3 +224,15 @@
 	\end{align*}
 	\ans $\left(1-e^{-t}\right)\theta(t)$
 \end{task}
+
+\begin{task}{b)}
+	Använd sambandet på s. 17:
+	\begin{align*}
+	&\int_{-\infty}^{t} \! e^{-\tau}\theta(\tau-1) \, d\tau =
+	\left(\int_{-1}^t\! e^{-\tau} \, d\tau\right)\theta(t-1)= \\ =
+	&\left(\left[-e^{-\tau}\right]_{-1}^t\right)\theta(t-1)=
+	\left(-e^{-t}-\left(-e^{-1}\right)\right)\theta(t-1)=
+	\left(e^{-1}-e^{-t}\right)\theta(t-1)
+	\end{align*}
+	\ans $\left(e^{-1}-e^{-t}\right)\theta(t-1)$
+\end{task}
