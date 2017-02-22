@@ -2,6 +2,7 @@
 
 \begin{task}{3.1 a)}
 	$f(t)=e^{-2t}\theta(t)$
+	
 	Se definitionen av Lapacetransformen i boken.
 	\begin{align*}
 	\laplace f(s)=
@@ -28,4 +29,26 @@
 	Här ser vi att $e^{-(s+2)t}\rightarrow 0$ då $t\rightarrow \infty$ om $a = \Re s > -2$ vilket utvidgar Laplacetransformen att inkludera hela planet $\Re s > -2$.
 	
 	\ans $\laplace f(s)= \dfrac{1}{s+2}\cond{\Re s > -2}$
+\end{task}
+
+\begin{task}{3.1 b)}
+	$f(t)=\theta(t)-\theta(t-1)$
+	
+	Se definitionen av Lapacetransformen i boken.
+	\begin{align*}
+	\laplace f(s)=
+	&\int_{-\infty}^{+\infty}\! e^{-st}f(t) \, dt=
+	\int_{-\infty}^{+\infty}\! e^{-st}(\theta(t)-\theta(t-1)) \, dt=
+	\int_{0}^{1}\! e^{-st} \, dt=
+	\left[-\frac{e^{-st}}{s}\right]_0^{1}= \\ =
+	&-\frac{e^{-s}}{s}+\frac{1}{s}=
+	\frac{1-e^{-s}}{s}\cond{s\neq0}
+	\end{align*}
+	Om $s=0$ gäller att $e^{-st} = 1$ vilket medför:
+	\[\laplace f(0)=
+	\int_{0}^{1}\! 1 \, dt=
+	\left[t\right]_0^1=
+	1-0=1\]
+	
+	\ans $\laplace f(s)= \dfrac{1}{s}(1-e^{-s})\cond{s\neq0}$ och $\laplace f(0)= 1$
 \end{task}
