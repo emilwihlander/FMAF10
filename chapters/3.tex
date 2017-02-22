@@ -1,0 +1,31 @@
+\chapter{3}{Laplacetransformationer}
+
+\begin{task}{3.1 a)}
+	$f(t)=e^{-2t}\theta(t)$
+	Se definitionen av Lapacetransformen i boken.
+	\begin{align*}
+	\laplace f(s)=
+	&\int_{-\infty}^{+\infty}\! e^{-st}f(t) \, dt=
+	\int_{-\infty}^{+\infty}\! e^{-st}e^{-2t}\theta(t) \, dt=
+	\int_{0}^{+\infty}\! e^{-(s+2)t} \, dt=
+	\left[-\frac{e^{-(s+2)t}}{s+2}\right]_0^{+\infty}= \\ =
+	&\lim\limits_{T\rightarrow\infty}\frac{1}{s+2}(1-e^{-(s+2)T})
+	\end{align*}
+	Om $s>-2$ gäller att $e^{-(s+2)T} \rightarrow 0$ när $T \rightarrow \infty$ vilket medför:
+	\[\laplace f(s)=\frac{1}{s+2}\cond{s>-2}\]
+	Om $s=-2$:
+	\[\laplace f(s)=
+	\int_{0}^{+\infty}\! 1 \, dt=
+	\left[t\right]_0^{+\infty}\rightarrow\infty\]
+	Om $s<-2$ gäller att $e^{-(s+2)T} \rightarrow \infty$ när $T \rightarrow \infty$ vilket medför:
+	\[\laplace f(s)\rightarrow-\infty\]
+	Detta medför att $\laplace f(s)$ endast är konvergent när $s>-2$ och därmed är Laplacetransformen för $e^{-2t}\theta(t)$ endast definierad i det intervallet.
+	
+	Låt nu $s$ vara ett komplext tal, $s=a+bi$:
+	\[\abs{e^{-(a+bi+2)t}}=
+	\abs{e^{-(a+2)t}}\underbrace{\abs{e^{-ibt}}}_{=1}=
+	e^{-(a+2)t}\]
+	Här ser vi att $e^{-(s+2)t}\rightarrow 0$ då $t\rightarrow \infty$ om $a = \Re s > -2$ vilket utvidgar Laplacetransformen att inkludera hela planet $\Re s > -2$.
+	
+	\ans $\laplace f(s)= \dfrac{1}{s+2}\cond{\Re s > -2}$
+\end{task}
