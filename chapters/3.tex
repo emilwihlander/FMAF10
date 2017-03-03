@@ -75,8 +75,24 @@
 	Använd $\theta(t)\longleftrightarrow \dfrac{1}{s}\cond{\sigma > 0}$ och $t^n\theta(t)\longleftrightarrow\dfrac{n!}{s^{n+1}}\cond{\sigma > 0}$.
 	\begin{align*}
 	f(t)=
-	(2+3t^2)\theta(t)=2\theta(t)+3t^2\theta(t)\longleftrightarrow
-	2\frac{1}{s}+3\frac{2}{s^3}=\frac{2s^2+6}{s^3}\cond{\sigma > 0}
+	(2+3t^2)\theta(t)=
+	2\theta(t)+3t^2\theta(t)\longleftrightarrow
+	2\frac{1}{s}+3\frac{2}{s^3}=
+	\frac{2s^2+6}{s^3}\cond{\sigma > 0}
 	\end{align*}
 	\ans $(2+3t^2)\theta(t)\longleftrightarrow\dfrac{2s^2+6}{s^3}\cond{\sigma > 0}$
+\end{task}
+
+\begin{task}{3.3 b)}
+	Låt $s=\sigma+i\omega$.
+	
+	Använd $t^ne^{at}\theta(t)\longleftrightarrow \dfrac{n!}{(s-a)^{n+1}}\cond{\sigma > \Re a}$.
+	\begin{align*}
+	f(t)=
+	e^{3t}\theta(t)=
+	t^0e^{3t}\theta(t)\longleftrightarrow
+	\frac{0!}{(s-3)^{1}}=
+	\frac{1}{s-3}\cond{\sigma > 3}
+	\end{align*}
+	\ans $e^{3t}\theta(t)\longleftrightarrow\dfrac{1}{s-3}\cond{\sigma > 3}$
 \end{task}
