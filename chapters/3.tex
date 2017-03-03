@@ -52,3 +52,19 @@
 	
 	\ans $\laplace f(s)= \dfrac{1}{s}(1-e^{-s})\cond{s\neq0}$ och $\laplace f(0)= 1$
 \end{task}
+
+\begin{task}{3.2}
+	\begin{align*}
+	f(at)\longleftrightarrow
+	&\int_{-\infty}^{+\infty}\! e^{-st}f(at) \, dt=
+	\left[\begin{array}{l}
+	x=at \\
+	dt=dx/a \\
+	t=-\infty\leftrightarrow x=-\infty \\
+	t=+\infty\leftrightarrow x=+\infty
+	\end{array}\right] =
+	\int_{-\infty}^{+\infty}\! e^{-sx/a}f(x) \, \frac{dx}{a}= \\ =
+	&\frac{1}{a}\int_{-\infty}^{+\infty}\! e^{-(s/a)x}f(x) \, dx=
+	\frac{1}{a}\laplace f\left(\frac{s}{a}\right)\mproof
+	\end{align*}
+\end{task}
