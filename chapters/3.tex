@@ -304,3 +304,26 @@
 	\end{align*}
 	\ans $t\sin(t-1)\theta(t-1) \llra e^{-s}\dfrac{s^2+2s+1}{(s^2+1)^2}\cond{\Re s > 0}$
 \end{task}
+
+\pagebreak
+\begin{task}{b)}
+	Låt $f(t)=\sin(t)\theta(t)$, $g(t)=tf(t)$ och $h(t)=g(t-1)=(t-1)\sin(t-1)\theta(t-1)$.
+	
+	Använd reglerna $tf(t) \llra -\dfrac{d}{ds}F(s)$, $f(t-a)\llra e^{-as}F(s)$ \\
+	och $\sin(bt)\theta(t)\llra\dfrac{b}{s^2+b^2}\cond{\Re s > 0}\cond{b\text{ reellt}}$:
+	\[\laplace f(s)=\frac{1}{s^2+1}\cond{\Re s > 0}\]
+	Använd kvotregeln för derivering:
+	\begin{align*}
+	\laplace g(s)=
+	&-\frac{d}{ds}\laplace f(s)=
+	-\frac{d}{ds}\frac{1}{s^2+1}=
+	\frac{-2s}{(s^2+1)^2}\cond{\Re s > 0}
+	\end{align*}
+	\begin{align*}
+	\laplace h(s)=
+	&e^{-s}\laplace g(s)=
+	e^{-s}\frac{-2s}{(s^2+1)^2}=
+	\frac{-2se^{-s}}{(s^2+1)^2}\cond{\Re s > 0}
+	\end{align*}
+	\ans $(t-1)\sin(t-1)\theta(t-1) \llra \dfrac{-2se^{-s}}{(s^2+1)^2}\cond{\Re s > 0}$
+\end{task}
