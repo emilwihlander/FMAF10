@@ -209,3 +209,18 @@
 	\[f(2t) \llra \frac{1}{2}F\left(\frac{s}{2}\right)=\frac{4s}{s^4+16}\]
 	\ans $f(2t) \llra \dfrac{4s}{s^4+16}$
 \end{task}
+
+\begin{task}{3.5}
+	Låt $s=\sigma + i\omega$. Använd reglerna $\alpha f(t)+\beta g(t) \llra \alpha F(s)+\beta G(s)$, $f(t-a) \llra e^{-at}F(s)$ och $\theta(t)\llra \frac{1}{s}\cond{\sigma > 0}$:
+	\[\laplace\theta(t-1) = \frac{e^{-t}}{s}\cond{\sigma > 0}\]
+	\[\laplace\theta(t-2) = \frac{e^{-2t}}{s}\cond{\sigma > 0}\]
+	\begin{align*}
+	u(t)=
+	&\theta(t)-2\theta(t-1)+\theta(t-2) \llra
+	\laplace\theta(t)-2\laplace\theta(t-1)+\laplace\theta(t-2)= \\ =
+	&\frac{1}{s}-2\frac{e^{-t}}{s}+\frac{e^{-2t}}{s}=
+	\frac{1}{s}((e^{-t})^2-2e^{-t}+1^2)=
+	\frac{1}{s}(e^{-t}-1)^2
+	\end{align*}
+	\ans $\laplace u(t) = \frac{1}{s}(e^{-t}-1)^2$
+\end{task}
