@@ -193,3 +193,19 @@
 	\[f'(t) \llra sF(s)=\frac{s^2}{s^4+1}\]
 	\ans $f'(t) \llra \dfrac{s^2}{s^4+1}$
 \end{task}
+
+\begin{task}{e)}
+	Använd regeln $f(at) \llra \frac{1}{\abs{a}}F\left(\frac{s}{a}\right)$:
+	\[f(2t) \ra a=2\]
+	\begin{align*}
+	F(s)=
+	\frac{s}{s^4+1} \lra 
+	\frac{1}{2}F\left(\frac{s}{2}\right)=
+	\frac{1}{2}\frac{s/2}{(s/2)^4+1}=
+	\frac{1}{2}\frac{\frac{s}{2}}{\frac{s^4+16}{16}}=
+	\frac{16s}{4(s^4+16)}=
+	\frac{4s}{s^4+16}
+	\end{align*}
+	\[f(2t) \llra \frac{1}{2}F\left(\frac{s}{2}\right)=\frac{4s}{s^4+16}\]
+	\ans $f(2t) \llra \dfrac{4s}{s^4+16}$
+\end{task}
