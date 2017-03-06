@@ -55,7 +55,7 @@
 
 \begin{task}{3.2}
 	\begin{align*}
-	f(at)\longleftrightarrow
+	f(at)\llra
 	&\int_{-\infty}^{+\infty}\! e^{-st}f(at) \, dt=
 	\left[\begin{array}{l}
 	x=at \\
@@ -72,69 +72,83 @@
 \begin{task}{3.3 a)}
 	Låt $s=\sigma+i\omega$.
 	
-	Använd $\theta(t)\longleftrightarrow \dfrac{1}{s}\cond{\sigma > 0}$ och $t^n\theta(t)\longleftrightarrow\dfrac{n!}{s^{n+1}}\cond{\sigma > 0}$.
+	Använd $\theta(t)\llra \dfrac{1}{s}\cond{\sigma > 0}$ och $t^n\theta(t)\llra\dfrac{n!}{s^{n+1}}\cond{\sigma > 0}$.
 	\begin{align*}
 	f(t)=
 	(2+3t^2)\theta(t)=
-	2\theta(t)+3t^2\theta(t)\longleftrightarrow
+	2\theta(t)+3t^2\theta(t)\llra
 	2\frac{1}{s}+3\frac{2}{s^3}=
 	\frac{2s^2+6}{s^3}\cond{\sigma > 0}
 	\end{align*}
-	\ans $(2+3t^2)\theta(t)\longleftrightarrow\dfrac{2s^2+6}{s^3}\cond{\sigma > 0}$
+	\ans $(2+3t^2)\theta(t)\llra\dfrac{2s^2+6}{s^3}\cond{\sigma > 0}$
 \end{task}
 
-\begin{task}{3.3 b)}
+\begin{task}{b)}
 	Låt $s=\sigma+i\omega$.
 	
-	Använd $t^ne^{at}\theta(t)\longleftrightarrow \dfrac{n!}{(s-a)^{n+1}}\cond{\sigma > \Re a}$.
+	Använd $t^ne^{at}\theta(t)\llra \dfrac{n!}{(s-a)^{n+1}}\cond{\sigma > \Re a}$.
 	\begin{align*}
 	f(t)=
 	e^{3t}\theta(t)=
-	t^0e^{3t}\theta(t)\longleftrightarrow
+	t^0e^{3t}\theta(t)\llra
 	\frac{0!}{(s-3)^{1}}=
 	\frac{1}{s-3}\cond{\sigma > 3}
 	\end{align*}
-	\ans $e^{3t}\theta(t)\longleftrightarrow\dfrac{1}{s-3}\cond{\sigma > 3}$
+	\ans $e^{3t}\theta(t)\llra\dfrac{1}{s-3}\cond{\sigma > 3}$
 \end{task}
 
-\begin{task}{3.3 c)}
+\begin{task}{c)}
 	Låt $s=\sigma+i\omega$.
 	
-	Använd $t^ne^{at}\theta(t)\longleftrightarrow \dfrac{n!}{(s-a)^{n+1}}\cond{\sigma > \Re a}$.
+	Använd $t^ne^{at}\theta(t)\llra \dfrac{n!}{(s-a)^{n+1}}\cond{\sigma > \Re a}$.
 	\begin{align*}
 	f(t)=
 	te^{3t}\theta(t)=
-	t^1e^{3t}\theta(t)\longleftrightarrow
+	t^1e^{3t}\theta(t)\llra
 	\frac{1!}{(s-3)^{1+1}}=
 	\frac{1}{(s-3)^2}\cond{\sigma > 3}
 	\end{align*}
-	\ans $te^{3t}\theta(t)\longleftrightarrow\dfrac{1}{(s-3)^2}\cond{\sigma > 3}$
+	\ans $te^{3t}\theta(t)\llra\dfrac{1}{(s-3)^2}\cond{\sigma > 3}$
 \end{task}
 
-\begin{task}{3.3 d)}
+\begin{task}{d)}
 	Låt $s=\sigma+i\omega$.
 	
-	Använd $t^ne^{at}\theta(t)\longleftrightarrow \dfrac{n!}{(s-a)^{n+1}}\cond{\sigma > \Re a}$.
+	Använd $t^ne^{at}\theta(t)\llra \dfrac{n!}{(s-a)^{n+1}}\cond{\sigma > \Re a}$.
 	\begin{align*}
 	f(t)=
-	t^2e^{3t}\theta(t)\longleftrightarrow
+	t^2e^{3t}\theta(t)\llra
 	\frac{2!}{(s-3)^{2+1}}=
 	\frac{2}{(s-3)^3}\cond{\sigma > 3}
 	\end{align*}
-	\ans $t^2e^{3t}\theta(t)\longleftrightarrow\dfrac{2}{(s-3)^3}\cond{\sigma > 3}$
+	\ans $t^2e^{3t}\theta(t)\llra\dfrac{2}{(s-3)^3}\cond{\sigma > 3}$
 \end{task}
 
-\begin{task}{3.3 e)}
+\begin{task}{e)}
 	Låt $s=\sigma+i\omega$.
 	
-	Använd $\cos(bt)\theta(t)\longleftrightarrow \dfrac{s}{s^2+b^2}\cond{\sigma > 0}\cond{b\text{ reellt}}$ och \\
-	$\sin(bt)\theta(t)\longleftrightarrow \dfrac{b}{s^2+b^2}\cond{\sigma > 0}\cond{b\text{ reellt}}$.
+	Använd $\cos(bt)\theta(t)\llra \dfrac{s}{s^2+b^2}\cond{\sigma > 0}\cond{b\text{ reellt}}$ och \\
+	$\sin(bt)\theta(t)\llra \dfrac{b}{s^2+b^2}\cond{\sigma > 0}\cond{b\text{ reellt}}$.
 	\begin{align*}
 	f(t)=&
 	(\cos2t-\sin2t)\theta(t)=
-	\cos2t\theta(t)-\sin2t\theta(t)\longleftrightarrow \\ \longleftrightarrow
+	\cos2t\theta(t)-\sin2t\theta(t)\llra \\ \llra
 	&\frac{s}{s^2+2^2}-\frac{2}{s^2+2^2}=
 	\frac{s-2}{s^2+4}\cond{\sigma > 0}
 	\end{align*}
-	\ans $(\cos2t-\sin2t)\theta(t)\longleftrightarrow\dfrac{s-2}{s^2+4}\cond{\sigma > 0}$
+	\ans $(\cos2t-\sin2t)\theta(t)\llra\dfrac{s-2}{s^2+4}\cond{\sigma > 0}$
+\end{task}
+
+\pagebreak
+\begin{task}{3.4 a)}
+	Använd regeln $tf(t) \llra -\dfrac{d}{ds}F(s)$ samt produktregeln och regeln för inre derivata:
+	\begin{align*}
+	F(s)=
+	\frac{s}{s^4+1} \lra 
+	\frac{d}{ds}F(s)=
+	&\frac{1}{s^4+1}+s\*(-1)\*\frac{1}{(s^4+1)^2}\*4s^3= \\ =
+	&\frac{s^4+1-4s^4}{(s^4+1)^2}=
+	\frac{1-3s^4}{(s^4+1)^2}
+	\end{align*}
+	\[tf(t) \llra -\dfrac{d}{ds}F(s)=-\frac{1-3s^4}{(s^4+1)^2}=\frac{3s^4-1}{(s^4+1)^2}\]
 \end{task}
