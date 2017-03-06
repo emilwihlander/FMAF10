@@ -224,3 +224,30 @@
 	\end{align*}
 	\ans $\laplace u(t) = \frac{1}{s}(e^{-t}-1)^2$
 \end{task}
+
+\begin{task}{3.6}
+	Låt $f(t)=\cos(t)\theta(t)$, $g(t)=tf(t)$ vilket medför att $v(t)=t^2\cos (t)\theta(t)=tg(t)$.
+	
+	Använd reglerna $tf(t) \llra -\dfrac{d}{ds}F(s)$ och $\cos(bt)\theta(t)\llra\dfrac{s}{s^2+b^2}\cond{\Re s > 0}\cond{b\text{ reellt}}$:
+	\[\laplace f(t)=\frac{s}{s^2+1}\cond{\Re s > 0}\]
+	Använd produktregeln för derivering:
+	\begin{align*}
+	\laplace g(t)=
+	&-\frac{d}{ds}\laplace f(t)=
+	-\frac{d}{ds}\left(\frac{s}{s^2+1}\right)=
+	-\left(\frac{1}{s^2+1}+s\*(-1)\*\frac{1}{(s^2+1)^2}\*2s\right)= \\ =
+	&-\frac{s^2+1-2s^2}{(s^2+1)^2}=
+	\frac{s^2-1}{(s^2+1)^2}\cond{\Re s > 0}
+	\end{align*}
+	Använd kvotregeln för derivering:
+	\begin{align*}
+	\laplace v(t)=
+	&-\frac{d}{ds}\laplace g(t)=
+	-\frac{d}{ds}\left(\frac{s^2-1}{(s^2+1)^2}\right)=
+	-\frac{2s(s^2+1)^2-(s^2-1)2(s^2+1)2s}{(s^2+1)^4}= \\ =
+	&-\frac{2s(s^2+1)(s^2+1-2(s^2-1))}{(s^2+1)^4}=
+	-\frac{2s(3-s^2)}{(s^2+1)^3}=
+	\frac{2s(s^2-3)}{(s^2+1)^3}
+	\end{align*}
+	\ans $\laplace v(t)=\dfrac{2s(s^2-3)}{(s^2+1)^3}$
+\end{task}
