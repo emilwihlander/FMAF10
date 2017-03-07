@@ -446,3 +446,27 @@
 	\end{align*}
 	\ans $f'(t)\theta(t)\llra-\dfrac{3}{s^5+1}$
 \end{task}
+
+\begin{task}{d)}
+	Använd regeln $f(at) \llra \frac{1}{\abs{a}}F\left(\frac{s}{a}\right)$.
+	
+	Låt $g(t)=\theta(t)f(t)$ och $h(t)=g(3t)$. 
+	
+	Eftersom $\theta(t)=\theta(3t)$ medför $h(t)=\theta(3t)f(3t)=f(3t)\theta(t)$.
+	
+	\[\laplace(\theta f)(s)=\frac{3s^4}{s^5+1}\]
+	\begin{align*}
+	\laplace g(s)=
+	\laplace (\theta f)(s)=
+	\frac{3s^4}{s^5+1}
+	\end{align*}
+	\begin{align*}
+	\laplace h(s)=
+	\frac{1}{3}\laplace g\left(\frac{s}{3}\right)=
+	\frac{1}{3}\*\frac{3(s/3)^4}{(s/3)^5+1}=
+	\frac{\frac{s^4}{3^3}}{3\*\frac{s^5+3^5}{3^5}}=
+	\frac{3^4s^4}{3^3(s^5+3^5)}=
+	\frac{3s^4}{s^5+243}
+	\end{align*}
+	\ans $f(3t)\theta(t)\llra\dfrac{3s^4}{s^5+243}$
+\end{task}
