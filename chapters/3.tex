@@ -347,3 +347,26 @@
 	\end{align*}
 	\ans $e^{t}\sin(t-1)\theta(t-1) \llra \dfrac{e^{-(s-1)}}{(s-1)^2+1}\cond{\Re s > 0}$
 \end{task}
+
+\begin{task}{d)}
+	Låt $f(t)=\theta(t)$, $g(t)=f(t-1)$ och $h(t)=tg(t)=t\theta(t-1)$.
+	
+	Använd reglerna $tf(t) \llra -\dfrac{d}{ds}F(s)$, $f(t-a)\llra e^{-as}F(s)$ \\
+	och $\theta(t)\llra\dfrac{1}{s}\cond{\Re s > 0}$:
+	\[\laplace f(s)=\frac{1}{s}\cond{\Re s > 0}\]
+	\begin{align*}
+	\laplace g(s)=
+	&e^{-s}\laplace f(s)=
+	e^{-s}\frac{1}{s}=
+	\frac{e^{-s}}{s}\cond{\Re s > 0}
+	\end{align*}
+	Använd kvotregeln för derivering:
+	\begin{align*}
+	\laplace h(s)=
+	&-\frac{d}{ds}\laplace g(s)=
+	-\frac{d}{ds}\frac{e^{-s}}{s}=
+	-\frac{(-1)\*e^{-s}s-e^{-s}}{s^2}=
+	e^{-s}\frac{s+1}{s^2}\cond{\Re s > 0}
+	\end{align*}
+	\ans $t\theta(t-1) \llra e^{-s}\frac{s+1}{s^2}\cond{\Re s > 0}$
+\end{task}
