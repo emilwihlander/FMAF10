@@ -521,3 +521,18 @@
 	\end{align*}
 	\ans $\cosh(at)\theta(t)\llra\dfrac{s}{s^2-a^2}\cond{\Re s > \Re a}$
 \end{task}
+
+\begin{task}{b)}
+	\[\sinh x=\dfrac{e^x-e^{-x}}{2}\]
+	Använd sambandet $t^ne^{at}\theta(t)\llra \dfrac{n!}{(s-a)^{n+1}}\cond{\Re s > \Re a}$:
+	\begin{align*}
+	\sinh(at)\theta(t) =
+	&\frac{e^{at}-e^{-at}}{2}\theta(t) =
+	\frac{1}{2}\left(e^{at}\theta(t)-e^{-at}\theta(t)\right) \llra \\ \llra
+	&\frac{1}{2}\left(\frac{1}{s-a}-\frac{1}{s+a}\right)=
+	\frac{1}{2}\*\frac{s+a-(s-a)}{s^2-a^2}=
+	\frac{2a}{2(s^2-a^2)}=
+	\frac{a}{s^2-a^2}\cond{\Re s > \Re a}
+	\end{align*}
+	\ans $\sinh(at)\theta(t)\llra\dfrac{a}{s^2-a^2}\cond{\Re s > \Re a}$
+\end{task}
