@@ -327,3 +327,23 @@
 	\end{align*}
 	\ans $(t-1)\sin(t-1)\theta(t-1) \llra \dfrac{-2se^{-s}}{(s^2+1)^2}\cond{\Re s > 0}$
 \end{task}
+
+\begin{task}{c)}
+	Låt $f(t)=\sin(t)\theta(t)$, $g(t)=f(t-1)$ och $h(t)=e^{t}g(t)=e^{t}\sin(t-1)\theta(t-1)$.
+	
+	Använd reglerna $e^{at}f(t) \llra F(s-a)$, $f(t-a)\llra e^{-as}F(s)$ \\
+	och $\sin(bt)\theta(t)\llra\dfrac{b}{s^2+b^2}\cond{\Re s > 0}\cond{b\text{ reellt}}$:
+	\[\laplace f(s)=\frac{1}{s^2+1}\cond{\Re s > 0}\]
+	\begin{align*}
+	\laplace g(s)=
+	&e^{-s}\laplace f(s)=
+	e^{-s}\frac{1}{s^2+1}=
+	\frac{e^{-s}}{s^2+1}\cond{\Re s > 0}
+	\end{align*}
+	\begin{align*}
+	\laplace h(s)=
+	&\laplace g(s-1)=
+	\frac{e^{-(s-1)}}{(s-1)^2+1}\cond{\Re s > 0}
+	\end{align*}
+	\ans $e^{t}\sin(t-1)\theta(t-1) \llra \dfrac{e^{-(s-1)}}{(s-1)^2+1}\cond{\Re s > 0}$
+\end{task}
