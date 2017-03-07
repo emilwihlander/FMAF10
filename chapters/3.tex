@@ -483,4 +483,26 @@
 	\frac{1}{\sqrt{0^2+2\*0+2}} =
 	\frac{1}{\sqrt{2}}
 	\end{align*}
+	\ans \[\int_{0}^{\infty}\! f(t)\, dt = \frac{1}{\sqrt{2}}\]
+\end{task}
+
+\begin{task}{3.12}
+	Funktionen:
+	\[f(t)=t(\theta(t)-\theta(t-1))+\theta(t-1)=t\theta(t)-t\theta(t-1)+\theta(t-1)\]
+	Använd reglerna $f(t-a) \llra e^{-as}F(s)$ och $tf(t) \llra -\dfrac{d}{ds}F(s)$.
+	
+	Låt $g(t)=\theta(t-1)$.
+	\[\laplace\theta(s)=\frac{1}{s}\cond{\Re s > 0}\]
+	\[\laplace g(s)=e^{-s}\laplace\theta(s)=\frac{e^{-s}}{s}\cond{\Re s > 0}\]
+	\[t\theta(t)\llra -\dfrac{d}{ds}\laplace\theta(s)=-\dfrac{d}{ds}\frac{1}{s}=\frac{1}{s^2}\cond{\Re s > 0}\]
+	\[t\theta(t-1)=
+	tg(t)\llra 
+	-\dfrac{d}{ds}\laplace g(s)=
+	-\dfrac{d}{ds}\frac{e^{-s}}{s}=
+	-\frac{-e^{-s}s-e^{-s}}{s^2}=
+	e^{-s}\frac{s+1}{s^2}\cond{\Re s > 0}\]
+	\[\laplace f(s)=\frac{1}{s^2}-e^{-s}\frac{s+1}{s^2}+\frac{e^{-s}}{s}=
+	\frac{1}{s^2}(1-e^{-s}(s+1)+se^{-s})=
+	\frac{1}{s^2}(1-e^{-s})\cond{\Re s > 0}\]
+	\ans $\laplace f(s)=\dfrac{1}{s^2}(1-e^{-s})\cond{\Re s > 0}$
 \end{task}
