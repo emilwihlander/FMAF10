@@ -470,3 +470,17 @@
 	\end{align*}
 	\ans $f(3t)\theta(t)\llra\dfrac{3s^4}{s^5+243}$
 \end{task}
+
+\begin{task}{3.11}
+	Använd definitionen av Laplacetransformen:
+	\begin{align*}
+	&\laplace (f\theta)(s)= \int_{-\infty}^{+\infty}\! e^{-st}f(t)\theta(t)\, dt =
+	\int_{0}^{\infty}\! e^{-st}f(t)\, dt \lra \\ \lra
+	&\laplace (f\theta)(0)= \int_{0}^{\infty}\! e^{-0\*t}f(t)\, dt =
+	\int_{0}^{\infty}\! f(t)\, dt \lra \\ \lra
+	&\int_{0}^{\infty}\! f(t)\, dt=
+	\laplace (f\theta)(0) =
+	\frac{1}{\sqrt{0^2+2\*0+2}} =
+	\frac{1}{\sqrt{2}}
+	\end{align*}
+\end{task}
