@@ -414,3 +414,21 @@
 	\end{align*}
 	\ans $e^{t}f(t)\theta(t)\llra \dfrac{3(s-1)^4}{(s-1)^5+1}$
 \end{task}
+
+\begin{task}{b)}
+	Låt $g(t)=\theta(t)f(t)$, $h(t)=g(t-1)=f(t-1)\theta(t-1)$.
+	
+	Använd regeln $f(t-a) \llra e^{-as}F(s)$.
+	\[\laplace(\theta f)(s)=\frac{3s^4}{s^5+1}\]
+	\begin{align*}
+	\laplace g(s)=
+	\laplace(\theta f)(s)=
+	\frac{3s^4}{s^5+1}
+	\end{align*}
+	\begin{align*}
+	\laplace h(s)=
+	e^{-s}\laplace g(s)=
+	e^{-s}\*\frac{3s^4}{s^5+1}
+	\end{align*}
+	\ans $f(t-1)\theta(t-1)\llra e^{-s}\*\dfrac{3s^4}{s^5+1}$
+\end{task}
