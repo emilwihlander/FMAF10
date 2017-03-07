@@ -383,3 +383,16 @@
 	\end{align*}
 	\ans $\laplace(\theta f')=\dfrac{s^6+2s^5}{(s^2+1)^3}-1$
 \end{task}
+
+\begin{task}{b)}
+	Använd regeln $f'(t)\theta(t)\llra s\laplace(f\theta)(s)-f(0)$.
+	
+	$\laplace(\theta f')(s)=\dfrac{s^6+2s^5}{(s^2+1)^3}-1$ (se \taskref{a)}) och $f'(0)=2$.
+	\begin{align*}
+	\laplace(\theta f'')=
+	s\laplace(f'\theta)(s)-f'(0)=
+	s\left(\frac{s^6+2s^5}{(s^2+1)^3}-1\right)-2=
+	\frac{s^7+2s^6}{(s^2+1)^3}-s-2
+	\end{align*}
+	\ans $\laplace(\theta f'')=\dfrac{s^7+2s^6}{(s^2+1)^3}-s-2$
+\end{task}
