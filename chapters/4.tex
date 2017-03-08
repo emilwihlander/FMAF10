@@ -70,3 +70,18 @@
 	\end{align*}
 	\ans $f(t)=(1+2t)e^{-3t}\theta(t)$
 \end{task}
+
+\begin{task}{4.4 a)}
+	Faktorisera och använd tabellen:
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{s}{s^2+6s+8}=
+	\frac{s}{(s+4)(s+2)}=
+	\frac{2}{s+4}-\frac{1}{s+2}=
+	2\frac{1}{s+4}-\frac{1}{s+2}\llra  \\ \llra
+	&2e^{-4t}\theta(t)-e^{-2t}\theta(t)=
+	(2e^{-4t}-e^{-2t})\theta(t)=
+	f(t)
+	\end{align*}
+	\ans $f(t)=(2e^{-4t}-e^{-2t})\theta(t)$
+\end{task}
