@@ -42,3 +42,16 @@
 	\[\laplace f(s)=\frac{2}{s+3}=2\frac{0!}{(s-(-3))^{0+1}}\llra 2e^{-3t}\theta(t)=f(t)\]
 	\ans $f(t)=2e^{-3t}\theta(t)$
 \end{task}
+
+\begin{task}{b)}
+	Faktorisera och använd tabellen:
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{1}{s+3}-\frac{2}{(s+3)^2}+\frac{1}{(s+3)^3}=
+	\frac{1}{s+3}-2\frac{1}{(s+3)^2}+\frac{1}{2}\*\frac{2}{(s+3)^3}\llra \\ \llra
+	&e^{-3t}\theta(t)-2te^{-3t}\theta(t)+\frac{1}{2}t^2e^{-3t}\theta(t)=
+	(1-2t+\frac{1}{2}t^2)e^{-3t}\theta(t)=
+	f(t)
+	\end{align*}
+	\ans $f(t)=(1-2t+\frac{1}{2}t^2)e^{-3t}\theta(t)$
+\end{task}
