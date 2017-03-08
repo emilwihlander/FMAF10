@@ -559,3 +559,22 @@
 	\frac{\int_{0}^{T}\! e^{-st}f(t)\, dt}{1-e^{-Ts}} \mproof
 	\end{align*}
 \end{task}
+
+\pagebreak
+\begin{task}{3.15}
+	Använd sambandet som blev funnet i \taskref{3.14}
+	\[\laplace(\theta f)(s)=\frac{\int_{0}^{T}\! e^{-st}f(t)\, dt}{1-e^{-Ts}}\]
+	Perioden för det kausala pulståget är $T=2$ och eftersom integralen endast täcker intervallet $[0, T]$ behövs funktionen endast konstrueras korrekt i det intervallet.
+	\[f(t)=1-2\theta(t-1)\cond{\text{i intervallet }[0,2]}\]
+	\begin{align*}
+	\laplace(\theta f)(s)=
+	&\frac{\int_{0}^{2}\! e^{-st}(1-2\theta(t-1))\, dt}{1-e^{-2s}}=
+	\frac{1}{1-e^{-2s}}\left(\int_{0}^{2}\! e^{-st}\, dt-2\int_{0}^{2}\! e^{-st}\theta(t-1)\, dt\right)= \\ =
+	&\frac{1}{1-e^{-2s}}\left(\int_{0}^{2}\! e^{-st}\, dt-2\int_{1}^{2}\! e^{-st}\, dt\right)=
+	\frac{1}{1-e^{-2s}}\left(\left[\frac{-e^{-st}}{s}\right]_0^2-2\left[\frac{-e^{-st}}{s}\right]_1^2\right)= \\ =
+	&\frac{1}{1-e^{-2s}}\left(\frac{-e^{-2s}-(-e^{0})}{s}-2\left(\frac{-e^{-2s}-(-e^{-s})}{s}\right)\right)=
+	\frac{1}{1-e^{-2s}}\left(\frac{1-2e^{-s}+e^{-2s}}{s}\right)= \\ =
+	&\frac{1}{s}\*\frac{(1-e^{-s})^2}{(1-e^{-s})(1+e^{-s})}=
+	\frac{1}{s}\*\frac{1-e^{-s}}{1+e^{-s}}
+	\end{align*}
+\end{task}
