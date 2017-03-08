@@ -536,3 +536,26 @@
 	\end{align*}
 	\ans $\sinh(at)\theta(t)\llra\dfrac{a}{s^2-a^2}\cond{\Re s > \Re a}$
 \end{task}
+
+\begin{task}{3.14}
+	Eftersom $f$ är periodisk med perioden $T$ är $f(t)=f(t-T)$ vilket medför att
+	\begin{align*}
+	&\theta(t)f(t)-\theta(t-T)f(t-T)=
+	\theta(t)f(t)-\theta(t-T)f(t)=
+	(\theta(t)-\theta(t-T))f(t)\llra \\ \llra
+	&\int_{-\infty}^{+\infty}\! e^{-st}(\theta(t)-\theta(t-T))f(t)\, dt=
+	\int_{0}^{T}\! e^{-st}f(t)\, dt
+	\end{align*}
+	Låt $g(t)=\theta(t)f(t)\llra \laplace g(s)=\laplace (\theta f)(s)$ vilket medför att \\
+	$\theta(t-T)f(t-T)=g(t-T)\llra e^{-Ts}\laplace g(s)$
+	\begin{align*}
+	&\theta(t)f(t)-\theta(t-T)f(t-T)=
+	g(t)-g(t-T)\llra \\ \llra
+	&\laplace g(s)-e^{-Ts}\laplace g(s)=
+	\int_{0}^{T}\! e^{-st}f(t)\, dt \lra \\ \lra
+	&\laplace g(s)(1-e^{-Ts})=
+	\int_{0}^{T}\! e^{-st}f(t)\, dt \lra \\ \lra
+	&\laplace g(s)=\laplace(\theta f)(s)=
+	\frac{\int_{0}^{T}\! e^{-st}f(t)\, dt}{1-e^{-Ts}} \mproof
+	\end{align*}
+\end{task}
