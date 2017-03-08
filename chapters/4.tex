@@ -173,9 +173,41 @@
 	\end{cases} \]
 	\begin{align*}
 	\laplace f(s)=
-	-\frac{2}{3}\*\frac{1}{s-2}+\frac{5}{3}\*\frac{k_2}{s+1} \llra
+	-\frac{2}{3}\*\frac{1}{s-2}+\frac{5}{3}\*\frac{1}{s+1} \llra
 	-\frac{2}{3}e^{-2t}\theta(t)+\frac{5}{3}e^{t}\theta(t)=
 	(5e^{t}-2e^{-2t})\frac{1}{3}\theta(t)
 	\end{align*}
 	\ans $f(t)=(5e^{t}-2e^{-2t})\frac{1}{3}\theta(t)$
+\end{task}
+
+\begin{task}{b)}
+	Hitta nollställena:
+	\[s^2+3s+2=0 \lra
+	s=-\frac{3}{2}\pm\sqrt{\frac{9}{4}-2}=
+	-\frac{3}{2}\pm\frac{1}{2}=\{-1,-2\}\]
+	Faktorisera och använd dämpningsregeln och tabellen:
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{3s+5}{s^3+3s^2+2s}=
+	\frac{3s+5}{s(s+1)(s+2)}=
+	\frac{k_1}{s}+\frac{k_2}{s+1}+\frac{k_3}{s+2}
+	\end{align*}
+	\[k_1(s+1)(s+2)+k_2s(s+2)+k_3s(s+1)=3s+5 \lra
+	\begin{cases}
+	k_1+k_2+k_3=0 \\
+	3k_1+2k_2+k_3=3 \\
+	2k_1=5
+	\end{cases} \lra
+	\begin{cases}
+	k_1=\frac{5}{2} \\
+	k_2=-2 \\
+	k_3=-\frac{1}{2}
+	\end{cases} \]
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{5}{2}\*\frac{1}{s}-2\*\frac{1}{s+1}-\frac{1}{2}\*\frac{1}{s+2} \llra
+	\frac{5}{2}\theta(t)-2e^{-t}\theta(t)-\frac{1}{2}e^{-2t}\theta(t)= \\ =
+	&\frac{1}{2}(5-4e^{-t}-e^{-2t})\theta(t)
+	\end{align*}
+	\ans $f(t)=\frac{1}{2}(5-4e^{-t}-e^{-2t})\theta(t)$
 \end{task}
