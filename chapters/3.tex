@@ -566,6 +566,7 @@
 	\[\laplace(\theta f)(s)=\frac{\int_{0}^{T}\! e^{-st}f(t)\, dt}{1-e^{-Ts}}\]
 	Perioden för det kausala pulståget är $T=2$ och eftersom integralen endast täcker intervallet $[0, T]$ behövs funktionen endast konstrueras korrekt i det intervallet.
 	\[f(t)=1-2\theta(t-1)\cond{\text{i intervallet }[0,2]}\]
+	Eftersom funktionen är kausal är $f(t) = \theta(t)f(t)$
 	\begin{align*}
 	\laplace(\theta f)(s)=
 	&\frac{\int_{0}^{2}\! e^{-st}(1-2\theta(t-1))\, dt}{1-e^{-2s}}=
@@ -577,4 +578,38 @@
 	&\frac{1}{s}\*\frac{(1-e^{-s})^2}{(1-e^{-s})(1+e^{-s})}=
 	\frac{1}{s}\*\frac{1-e^{-s}}{1+e^{-s}}
 	\end{align*}
+\end{task}
+
+\begin{task}{3.16}
+	\[f(t)= t^2(\theta(t)-\theta(t-1))+(2-t)(\theta(t-1)-\theta(t-2))\]
+	Använd definitionen av Laplacetransformen.
+	\begin{align*}
+	\laplace f(s)=
+	&\int_{-\infty}^{+\infty}\! e^{-st}(t^2(\theta(t)-\theta(t-1))+(2-t)(\theta(t-1)-\theta(t-2)))\, dt= \\ =
+	&\int_{-\infty}^{+\infty}\! e^{-st}t^2(\theta(t)-\theta(t-1))\, dt+\int_{-\infty}^{+\infty}\! e^{-st}(2-t)(\theta(t-1)-\theta(t-2))\, dt= \\ =
+	&\int_{0}^{1}\! e^{-st}t^2\, dt+\int_{1}^{2}\! e^{-st}(2-t)\, dt
+	\end{align*}
+	\begin{align*}
+	\int_{0}^{1}\! e^{-st}t^2\, dt=
+	&\left[-\frac{e^{-st}}{s}t^2\right]_0^1+2\int_{0}^{1}\! \frac{e^{-st}}{s}t\, dt=
+	-\frac{e^{-s}}{s}+2\left(\left[-\frac{e^{-st}}{s^2}t\right]_0^1+\int_{0}^{1}\! \frac{e^{-st}}{s^2}\, dt\right)= \\ =
+	&-\frac{e^{-s}}{s}+2\left(-\frac{e^{-s}}{s^2}+\left[-\frac{e^{-st}}{s^3}\right]_0^1\right)=
+	-\frac{s^2e^{-s}}{s^3}-\frac{2se^{-s}}{s^3}+2\left(-\frac{e^{-s}}{s^3}-\left(\frac{1}{s^3}\right)\right)= \\ =
+	&\frac{1}{s^3}\left(2-e^{-s}(s^2+2s+2)\right)
+	\end{align*}
+	\begin{align*}
+	\int_{1}^{2}\! e^{-st}(2-t)\, dt=
+	&2\int_{1}^{2}\! e^{-st}\, dt-\int_{1}^{2}\! e^{-st}t\, dt=
+	2\left[-\frac{e^{-st}}{s}\right]_1^2-\left(\left[-\frac{e^{-st}}{s}t\right]_1^2+\int_{1}^{2}\! \frac{e^{-st}}{s}\, dt\right)= \\ =
+	&2\left(-\frac{e^{-2s}}{s}-\left(-\frac{e^{-s}}{s}\right)\right)-\left(-\frac{2e^{-2s}}{s}-\left(-\frac{e^{-s}}{s}\right)+\left[-\frac{e^{-st}}{s^2}\right]_1^2\right)= \\ =
+	&\frac{e^{-s}}{s}-\left(-\frac{e^{-2s}}{s^2}-\left(-\frac{e^{-s}}{s^2}\right)\right)=
+	\frac{1}{s^2}\left(se^{-s}+e^{-2s}-e^{-s}\right)
+	\end{align*}
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{1}{s^3}\left(2-e^{-s}(s^2+2s+2)\right)+\frac{1}{s^2}\left(se^{-s}+e^{-2s}-e^{-s}\right)= \\ =
+	&\frac{1}{s^3}\left(2-s^2e^{-s}-2se^{-s}-2e^{-s}+s^2e^{-s}+se^{-2s}-se^{-s}\right)=
+	\frac{1}{s^3}\left(2-2e^{-s}-3se^{-s}+se^{-2s}\right)
+	\end{align*}
+	\ans $\laplace f(s)=\dfrac{1}{s^3}\left(2-2e^{-s}-3se^{-s}+se^{-2s}\right)$
 \end{task}
