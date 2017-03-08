@@ -149,3 +149,33 @@
 	\end{align*}
 	\ans $f(t)=(\cos(2t)-\sin(2t))e^{-2t}\theta(t)$
 \end{task}
+
+\begin{task}{4.6 a)}
+	Hitta nollställena:
+	\[s^2-s-2=0 \lra
+	s=\frac{1}{2}\pm\sqrt{\frac{1}{4}+2}=
+	\frac{1}{2}\pm\frac{3}{2}=\{2,-1\}\]
+	Faktorisera och använd dämpningsregeln och tabellen:
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{s+3}{s^2-s-2}=
+	\frac{s+3}{(s-2)(s+1)}=
+	\frac{k_1}{s-2}+\frac{k_2}{s+1}
+	\end{align*}
+	\[k_1(s+1)+k_2(s-2)=s+3 \lra
+	\begin{cases}
+	k_1+k_2=1 \\
+	k_2-2k_1=3
+	\end{cases} \lra
+	\begin{cases}
+	k_1=-\frac{2}{3} \\
+	k_2=\frac{5}{3}
+	\end{cases} \]
+	\begin{align*}
+	\laplace f(s)=
+	-\frac{2}{3}\*\frac{1}{s-2}+\frac{5}{3}\*\frac{k_2}{s+1} \llra
+	-\frac{2}{3}e^{-2t}\theta(t)+\frac{5}{3}e^{t}\theta(t)=
+	(5e^{t}-2e^{-2t})\frac{1}{3}\theta(t)
+	\end{align*}
+	\ans $f(t)=(5e^{t}-2e^{-2t})\frac{1}{3}\theta(t)$
+\end{task}
