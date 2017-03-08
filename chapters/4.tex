@@ -55,3 +55,18 @@
 	\end{align*}
 	\ans $f(t)=(1-2t+\frac{1}{2}t^2)e^{-3t}\theta(t)$
 \end{task}
+
+\begin{task}{c)}
+	Faktorisera och använd tabellen:
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{s+5}{(s+3)^2}=
+	\frac{s+3+2}{(s+3)^2}=
+	\frac{s+3}{(s+3)^2}+\frac{2}{(s+3)^2}=
+	\frac{1}{s+3}+2\frac{1}{(s+3)^2}\llra \\ \llra
+	&e^{-3t}\theta(t)+2te^{-3t}\theta(t)=
+	(1+2t)e^{-3t}\theta(t)=
+	f(t)
+	\end{align*}
+	\ans $f(t)=(1+2t)e^{-3t}\theta(t)$
+\end{task}
