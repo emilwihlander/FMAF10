@@ -122,3 +122,17 @@
 	\end{align*}
 	\ans $f(t)=\cos(4t)\theta(t)$
 \end{task}
+
+\begin{task}{d)}
+	Kvadratkomplettera, faktorisera och använd dämpningsregeln och tabellen:
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{s}{s^2+4s+8}=
+	\frac{s}{(s+2)^2+2^2}=
+	\frac{s+2}{(s+2)^2+2^2}-\frac{2}{(s+2)^2+2^2} \llra \\ \llra
+	&e^{-2t}\cos(2t)\theta(t)-e^{-2t}\sin(2t)\theta(t)=
+	(\cos(2t)-\sin(2t))e^{-2t}\theta(t)=
+	f(t)
+	\end{align*}
+	\ans $f(t)=(\cos(2t)-\sin(2t))e^{-2t}\theta(t)$
+\end{task}
