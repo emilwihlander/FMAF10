@@ -286,3 +286,31 @@
 	\end{align*}
 	\ans $\laplace^{-1}\left(\dfrac{s}{s^3+5s^2+9s+5}\right)=\dfrac{1}{2}(-e^{-t}+(\cos t+3\sin t)e^{-2t})\theta(t)$
 \end{task}
+
+\begin{task}{4.8}
+	Faktorisera och använd tabellen:
+	\[\frac{1}{s^3(s^2+1)}=\frac{k_1s+k_2}{s^2+1}+\frac{k_3}{s}+\frac{k_4}{s^2}+\frac{k_5}{s^3}\]
+	\[s^3(k_1s+k_2)+k_3s^2(s^2+1)+k_4s(s^2+1)+k_5(s^2+1)=1 \lra
+	\begin{cases}
+	k_1+k_3=0 \\
+	k_2+k_4=0 \\
+	k_3+k_5=0 \\
+	k_4=0 \\
+	k_5=1
+	\end{cases} \lra
+	\begin{cases}
+	k_1=1 \\
+	k_2=0 \\
+	k_3=-1 \\
+	k_4=0 \\
+	k_5=1
+	\end{cases} \]
+	\begin{align*}
+	\frac{1}{s^3(s^2+1)}=
+	\frac{s}{s^2+1}-\frac{1}{s}+\frac{1}{s^3}=
+	\frac{s}{s^2+1}-\frac{1}{s}+\frac{1}{2}\*\frac{2}{s^3} \llra
+	&\cos(t)\theta(t)-\theta(t)+\frac{1}{2}t^2\theta(t) = \\ =
+	&\left(\cos(t)-1+\frac{1}{2}t^2\right)\theta(t)
+	\end{align*}
+	\ans $\laplace^{-1}\left(\dfrac{1}{s^3(s^2+1)}\right)=\left(\cos(t)-1+\frac{1}{2}t^2\right)\theta(t)$
+\end{task}
