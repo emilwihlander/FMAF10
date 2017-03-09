@@ -381,3 +381,29 @@
 	\end{align*}
 	\ans $f(t)=\sin(t-\pi)\theta(t-\pi)+\sin(t-2\pi)\theta(t-2\pi)$
 \end{task}
+
+\begin{task}{c)}
+	Faktorisera och använd reglerna för förskjutning och dämpning.
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{e^{2s}}{s^2+s}=
+	e^{2s}\left(\frac{k_1}{s}+\frac{k_2}{s+1}\right)
+	\end{align*}
+	\[k_1(s+1)+k_2s=1\lra
+	\begin{cases}
+	k_1+k_2=0 \\
+	k_1=1
+	\end{cases}\lra
+	\begin{cases}
+	k_1=1 \\
+	k_2=-1
+	\end{cases}\]
+	\begin{align*}
+	\laplace f(s)=
+	e^{2s}\left(\frac{1}{s}-\frac{1}{s+1}\right)=
+	e^{2s}\frac{1}{s}-e^{2s}\frac{1}{s+1} \llra
+	&\theta(t+2)-e^{-(t+2)}\theta(t+2)= \\ =
+	&(1-e^{-t-2})\theta(t+2)
+	\end{align*}
+	\ans $f(t)=(1-e^{-t-2})\theta(t+2)$
+\end{task}
