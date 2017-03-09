@@ -340,4 +340,27 @@
 	&e^{-(t-1)}\theta(t-1)+2e^{-2(t-1)}\theta(t-1)= \\ =
 	&(-e^{1-t}+2e^{2-2t})\theta(t-1)
 	\end{align*}
+	\ans $f(t)=(-e^{1-t}+2e^{2-2t})\theta(t-1)$
+\end{task}
+
+\begin{task}{c)}
+	Se \taskref{b)} för beräkning av den andra termen.
+	\[\laplace f(s)=\frac{1+se^{-s}}{s^2+3s+2}=\frac{1}{(s+1)(s+2)}+\frac{se^{-s}}{(s+1)(s+2)}=\frac{k_1}{s+1}+\frac{k_2}{s+2}+e^{-s}\left(-\frac{1}{s+1}+2\frac{1}{s+2}\right)\]
+	\[k_1(s+2)+k_2(s+1)=1\lra
+	\begin{cases}
+	k_1+k_2=0 \\
+	2k_1+k_2=1
+	\end{cases}\lra
+	\begin{cases}
+	k_1=1 \\
+	k_2=-1
+	\end{cases}\]
+	Använd regeln för dämpning (samt \taskref{b)}):
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{1}{s+1}-\frac{1}{s+2}+e^{-s}\left(-\frac{1}{s+1}+2\frac{1}{s+2}\right)\llra \\ \llra
+	&e^{-t}\theta(t)-e^{-2}\theta(t)+(-e^{1-t}+2e^{2-2t})\theta(t-1)= \\ =
+	&(e^{-t}-e^{-2t})\theta(t)+(-e^{1-t}+2e^{2-2t})\theta(t-1)
+	\end{align*}
+	\ans $f(t)=(e^{-t}-e^{-2t})\theta(t)+(-e^{1-t}+2e^{2-2t})\theta(t-1)$
 \end{task}
