@@ -314,3 +314,9 @@
 	\end{align*}
 	\ans $\laplace^{-1}\left(\dfrac{1}{s^3(s^2+1)}\right)=\left(\cos(t)-1+\frac{1}{2}t^2\right)\theta(t)$
 \end{task}
+
+\begin{task}{4.9 a)}
+	Låt $\laplace g(s)=\dfrac{1}{s}\llra\theta(t)$ och använd reglerna för dämpning och förskjutning.
+	\[\laplace f(s)=\frac{e^{-s}}{s+1}=e^{-s}\laplace g(s+1) \llra e^{-(t-1)}g(t-1)=e^{1-t}\theta(t-1)\]
+	\ans $f(t)=e^{1-t}\theta(t-1)$
+\end{task}
