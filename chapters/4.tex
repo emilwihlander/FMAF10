@@ -478,24 +478,39 @@
 \end{task}
 
 \begin{task}{4.12 a)}
-	Faktorera och förenkla:
+	Faktorisera och förenkla:
 	\[sF(s)=
 	s\frac{s^2+3s+2}{(s+1)(s+3)}=
 	s\frac{(s+1)(s+2)}{(s+1)(s+3)}=
 	s\frac{s+2}{s+3}\]
-	Polen till $sF(s)$ är negativa.
+	Polen till $sF(s)$ är negativ.
 	\begin{align*}
 	\lim\limits_{s\rightarrow 0}sF(s)=
-	\lim\limits_{s\rightarrow 0}s\frac{s^2+3s+2}{(s+1)(s+3)}\rightarrow
-	0\*\frac{0+0+2}{(0+1)(0+3)}=
+	\lim\limits_{s\rightarrow 0}s\frac{s+2}{s+3}\rightarrow
+	0\*\frac{0+2}{0+3}=
 	0=\lim\limits_{t\rightarrow +\infty}f(t)
 	\end{align*}
 	\ans $\lim\limits_{t\rightarrow +\infty}f(t)=0$
 \end{task}
 
 \begin{task}{b)}
-	Faktorera och förenkla:
+	Faktorisera och förenkla:
 	\[sF(s)=
 	s\frac{s}{(s+1)(s-2)}\]
 	Båda polerna till $sF(s)$ är inte negativa och därmed gäller inte slutvärdessatsen.
+\end{task}
+
+\begin{task}{c)}
+	Faktorisera och förenkla:
+	\[sF(s)=
+	s\frac{1}{s(s+1)(s+2)}=
+	\frac{1}{(s+1)(s+2)}\]
+	Båda polerna till $sF(s)$ är negativa.
+	\begin{align*}
+	\lim\limits_{s\rightarrow 0}sF(s)=
+	\lim\limits_{s\rightarrow 0}\frac{1}{(s+1)(s+2)}\rightarrow
+	\frac{1}{(0+1)(0+2)}=
+	\frac{1}{2}=\lim\limits_{t\rightarrow +\infty}f(t)
+	\end{align*}
+	\ans $\lim\limits_{t\rightarrow +\infty}f(t)=\dfrac{1}{2}$
 \end{task}
