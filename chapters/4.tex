@@ -407,3 +407,16 @@
 	\end{align*}
 	\ans $f(t)=(1-e^{-t-2})\theta(t+2)$
 \end{task}
+
+\begin{task}{d)}
+	Faktorisera och använd reglerna för förskjutning och dämpning.
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{2-2e^{-s}-se^{-s}}{s^2-1}= \\ =
+	&\left(\frac{1}{s-1}-\frac{1}{s+1}\right)-e^{-s}\left(\frac{1}{s-1}-\frac{1}{s+1}\right)-\frac{1}{2}e^{-s}\left(\frac{1}{s-1}+\frac{1}{s+1}\right)= \\ =
+	&\frac{1}{s-1}-\frac{1}{s+1}-\frac{3}{2}e^{-s}\frac{1}{s-1}+\frac{1}{2}e^{-s}\frac{1}{s+1} \llra \\ \llra
+	&e^{t}\theta(t)-e^{-t}\theta(t)-\frac{3}{2}e^{t-1}\theta(t-1)+\frac{1}{2}e^{-(t-1)}\theta(t-1)= \\ =
+	&(e^{t}-e^{-t})\theta(t)+\frac{1}{2}(e^{1-t}-3e^{t-1})\theta(t-1)
+	\end{align*}
+	\ans $f(t)=(e^{t}-e^{-t})\theta(t)+\frac{1}{2}(e^{1-t}-3e^{t-1})\theta(t-1)$
+\end{task}
