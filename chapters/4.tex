@@ -370,3 +370,14 @@
 	\[\laplace f(s)=e^{-5s}\frac{1}{s+2}=e^{-5s}\laplace g(s+2) \llra e^{-2(t-5)}g(t-5)=e^{2(5-t)}\theta(t-5)\]
 	\ans $f(t)=e^{2(5-t)}\theta(t-5)$
 \end{task}
+
+\begin{task}{b)}
+	Faktorisera och använd regeln för förskjutning.
+	\begin{align*}
+	\laplace f(s)=
+	&(e^{-\pi s}+e^{-2\pi s})\frac{1}{s^2+1}=
+	e^{-\pi s}\frac{1}{s^2+1}+e^{-2\pi s}\frac{1}{s^2+1} \llra \\ \llra
+	&\sin(t-\pi)\theta(t-\pi)+\sin(t-2\pi)\theta(t-2\pi)
+	\end{align*}
+	\ans $f(t)=\sin(t-\pi)\theta(t-\pi)+\sin(t-2\pi)\theta(t-2\pi)$
+\end{task}
