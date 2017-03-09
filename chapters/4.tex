@@ -424,3 +424,16 @@
 \begin{task}{4.11 a)}
 	Bygynnelsevärdessatsen kan inte användas eftersom $F(s)$ inte uppfyller villkoret om att vara ett äkta bråk (både nämnaren och täljaren har graden 2).
 \end{task}
+
+\begin{task}{b)}
+	\begin{align*}
+	\lim\limits_{s\rightarrow +\infty}sF(s)=
+	&\lim\limits_{s\rightarrow +\infty}\frac{s^2}{(s+1)(s-2)}=
+	\lim\limits_{s\rightarrow +\infty}\frac{s^2}{s^2-s-2}=
+	\lim\limits_{s\rightarrow +\infty}\frac{\frac{s^2}{s^2}}{\frac{s^2}{s^2}-\frac{s}{s^2}-\frac{2}{s^2}}= \\ =
+	&\lim\limits_{s\rightarrow +\infty}\frac{1}{1-\frac{1}{s}-\frac{2}{s^2}}\rightarrow
+	\frac{1}{1-0-0}=
+	1=\lim\limits_{t\rightarrow +0}f(t)
+	\end{align*}
+	\ans $\lim\limits_{t\rightarrow +0}f(t)=1$
+\end{task}
