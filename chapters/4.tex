@@ -364,3 +364,9 @@
 	\end{align*}
 	\ans $f(t)=(e^{-t}-e^{-2t})\theta(t)+(-e^{1-t}+2e^{2-2t})\theta(t-1)$
 \end{task}
+
+\begin{task}{4.10 a)}
+	Låt $\laplace g(s)=\dfrac{1}{s}\llra\theta(t)$ och använd reglerna för dämpning och förskjutning.
+	\[\laplace f(s)=e^{-5s}\frac{1}{s+2}=e^{-5s}\laplace g(s+2) \llra e^{-2(t-5)}g(t-5)=e^{2(5-t)}\theta(t-5)\]
+	\ans $f(t)=e^{2(5-t)}\theta(t-5)$
+\end{task}
