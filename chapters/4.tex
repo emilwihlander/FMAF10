@@ -566,3 +566,29 @@
 	\end{align*}
 	\ans $f(t)=\frac{1}{\alpha^2+\omega^2}\left(e^{-\alpha t}-\cos(\omega t)+\frac{\alpha}{\omega}\sin(\omega t)\right)\theta(t)$
 \end{task}
+
+\begin{task}{b)}
+	låt $\laplace f(s)=\dfrac{1}{(s+\alpha)s^2}\cond{\alpha \neq 0}$.
+	\begin{align*}
+	\frac{1}{(s+\alpha)s^2}=
+	\frac{k_1}{s+\alpha}+\frac{k_2}{s}+\frac{k_3}{s^2}
+	\end{align*}
+	\[k_1s^2+k_2s(s+\alpha)+k_3(s+\alpha)=1\lra
+	\begin{cases}
+	k_1+k_2=0 \\
+	k_2\alpha +k_3=0 \\
+	k_3\alpha=1
+	\end{cases}\lra
+	\begin{cases}
+	k_1=\frac{1}{\alpha^2} \\
+	k_2=-\frac{1}{\alpha^2} \\
+	k_3=\frac{1}{\alpha}
+	\end{cases}\]
+	\begin{align*}
+	\laplace f(s)=
+	\frac{1}{\alpha^2}\*\frac{1}{s+\alpha}-\frac{1}{\alpha^2}\*\frac{1}{s}+\frac{1}{\alpha}\*\frac{1}{s^2} \llra
+	&\frac{1}{\alpha^2}e^{-\alpha t}\theta(t)-\frac{1}{\alpha^2}\theta(t)+\frac{1}{\alpha}t\theta(t)= \\ =
+	&\frac{1}{\alpha}\left(\frac{1}{\alpha}e^{-\alpha t}-\frac{1}{\alpha}+t\right)\theta(t)
+	\end{align*}
+	\ans $f(t)=\frac{1}{\alpha}\left(\frac{1}{\alpha}e^{-\alpha t}-\frac{1}{\alpha}+t\right)\theta(t)$
+\end{task}
