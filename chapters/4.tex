@@ -247,3 +247,42 @@
 	\end{align*}
 	\ans $f(t)=\delta'(t)-4\delta(t)+(2e^{-t}+6e^{-3t})\theta(t)$
 \end{task}
+
+\begin{task}{4.7}
+	En av polerna är $s=-1$ (se anvisningen).
+	\begin{align*}
+	&s^3+5s^2+9s+5=(s+1)(s^2+As+B)=s^3+(A+1)s^2+(B+A)s+B \lra \\ \lra
+	&\begin{cases}
+	A+1=5 \\
+	B+A=9 \\
+	B=5
+	\end{cases} \lra
+	\begin{cases}
+	A=4 \\
+	B=5
+	\end{cases} \lra
+	s^3+5s^2+9s+5=(s+1)(s^2+4s+5)
+	\end{align*}
+	Faktorisera och använd dämpningsregeln och tabellen:
+	\[\frac{s}{s^3+5s^2+9s+5}=\frac{k_1}{s+1}+\frac{k_2s+k_3}{s^2+4s+5}\]
+	\[k_1(s^2+4s+5)+(k_2s+k_3)(s+1)=s \lra
+	\begin{cases}
+	k_1+k_2=0 \\
+	4k_1+k_2+k_3=1 \\
+	5k_1+k_3=0
+	\end{cases} \lra
+	\begin{cases}
+	k_1=-\frac{1}{2} \\
+	k_2=\frac{1}{2} \\
+	k_3=\frac{5}{2}
+	\end{cases} \]
+	\begin{align*}
+	\frac{s}{s^3+5s^2+9s+5}=
+	&-\frac{1}{2}\*\frac{1}{s+1}+\frac{1}{2}\*\frac{s+5}{s^2+4s+5}=
+	-\frac{1}{2}\*\frac{1}{s+1}+\frac{1}{2}\*\frac{s+2+3}{(s+2)^2+1}= \\ =
+	&-\frac{1}{2}\*\frac{1}{s+1}+\frac{1}{2}\*\frac{s+2}{(s+2)^2+1}+\frac{3}{2}\*\frac{1}{(s+2)^2+1} \llra \\ \llra
+	&-\frac{1}{2}e^{-t}\theta(t)+\frac{1}{2}e^{-2t}\cos(t)\theta(t)+\frac{3}{2}e^{-2t}\sin(t)\theta(t)= \\ =
+	&\frac{1}{2}(-e^{-t}+(\cos t+3\sin t)e^{-2t})\theta(t)
+	\end{align*}
+	\ans $\laplace^{-1}\left(\dfrac{s}{s^3+5s^2+9s+5}\right)=\dfrac{1}{2}(-e^{-t}+(\cos t+3\sin t)e^{-2t})\theta(t)$
+\end{task}
