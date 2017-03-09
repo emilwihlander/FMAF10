@@ -211,3 +211,39 @@
 	\end{align*}
 	\ans $f(t)=\frac{1}{2}(5-4e^{-t}-e^{-2t})\theta(t)$
 \end{task}
+
+\begin{task}{c)}
+	Hitta nollställena:
+	\[s^2+4s+3=0 \lra
+	s=-2\pm\sqrt{4-3}=
+	-2\pm1=\{-1,-3\}\]
+	Faktorisera och använd dämpningsregeln och tabellen:
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{s^3-5s}{s^2+4s+3}=
+	s\frac{s^2-5}{(s+1)(s+3)}=
+	s\left(\frac{k_1}{s+1}+\frac{k_2}{s+3}+k_3\right)
+	\end{align*}
+	\[k_1(s+3)+k_2(s+1)+k_3(s+3)(s+1)=s^2-5 \lra
+	\begin{cases}
+	k_3=1 \\
+	k_1+k_2+4k_3=0 \\
+	3k_1+k_2+3k_3=-5
+	\end{cases} \lra
+	\begin{cases}
+	k_1=-2 \\
+	k_2=-2 \\
+	k_3=1
+	\end{cases} \]
+	Använd regeln $sF(s)\llra f'(t)$ och $\delta(t)=1$ för att bestämma inversen till $s$.
+	\[s=s\*1\llra\delta'(t)\]
+	\begin{align*}
+	\laplace f(s)=
+	&-2\frac{s}{s+1}-2\frac{s}{s+3}+s =
+	-2\frac{s+1}{s+1}+2\frac{1}{s+1}-2\frac{s+3}{s+3}+6\frac{1}{s+3}+s= \\ =
+	&-4+2\frac{1}{s+1}+6\frac{1}{s+3}+s\llra
+	-4\delta(t)+2e^{-t}\theta(t)+6e^{-3t}\theta(t)+\delta'(t)= \\ =
+	&\delta'(t)-4\delta(t)+(2e^{-t}+6e^{-3t})\theta(t)
+	\end{align*}
+	\ans $f(t)=\delta'(t)-4\delta(t)+(2e^{-t}+6e^{-3t})\theta(t)$
+\end{task}
