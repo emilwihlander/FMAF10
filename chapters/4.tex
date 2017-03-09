@@ -538,3 +538,31 @@
 	\frac{1}{(s+1)(s+i)(s-i)}\]
 	Realdelen i de komplexa polerna är 0 vilket inte är negativt och därmed gäller inte slutvärdessatsen.
 \end{task}
+
+\begin{task}{4.13 a)}
+	låt $\laplace f(s)=\dfrac{1}{(s+\alpha)(s^2+\omega^2)}\cond{\omega \neq 0}$.
+	\begin{align*}
+	\frac{1}{(s+\alpha)(s^2+\omega^2)}=
+	\frac{k_1}{s+\alpha}+\frac{k_2s+k_3}{s^2+\omega^2}
+	\end{align*}
+	\[k_1(s^2+\omega^2)+(k_2s+k_3)(s+\alpha)=1\lra
+	\begin{cases}
+	k_1+k_2=0 \\
+	k_2\alpha +k_3=0 \\
+	k_1\omega^2+k_3\alpha=1
+	\end{cases}\lra
+	\begin{cases}
+	k_1=\frac{1}{\alpha^2+\omega^2} \\
+	k_2=-\frac{1}{\alpha^2+\omega^2} \\
+	k_3=\frac{a}{\alpha^2+\omega^2}
+	\end{cases}\]
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{1}{\alpha^2+\omega^2}\left(\frac{1}{s+\alpha}+\frac{-s+\alpha}{s^2+\omega^2}\right)=
+	\frac{1}{\alpha^2+\omega^2}\left(\frac{1}{s+\alpha}-\frac{s}{s^2+\omega^2}+\frac{\alpha}{s^2+\omega^2}\right)= \\ =
+	&\frac{1}{\alpha^2+\omega^2}\left(\frac{1}{s+\alpha}-\frac{s}{s^2+\omega^2}+\frac{\alpha}{\omega}\frac{\omega}{s^2+\omega^2}\right) \llra \\ \llra
+	&\frac{1}{\alpha^2+\omega^2}\left(e^{-\alpha t}\theta(t)-\cos(\omega t)\theta(t)+\frac{\alpha}{\omega}\sin(\omega t)\theta(t)\right)= \\ =
+	&\frac{1}{\alpha^2+\omega^2}\left(e^{-\alpha t}-\cos(\omega t)+\frac{\alpha}{\omega}\sin(\omega t)\right)\theta(t)
+	\end{align*}
+	\ans $f(t)=\frac{1}{\alpha^2+\omega^2}\left(e^{-\alpha t}-\cos(\omega t)+\frac{\alpha}{\omega}\sin(\omega t)\right)\theta(t)$
+\end{task}
