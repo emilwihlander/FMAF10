@@ -242,3 +242,25 @@
 	
 	\ans $y(t)=\frac{1}{4}(e^{t}-e^{-t}-2\sin(t))\cond{t\in\mathbb{R}}$
 \end{task}
+
+\pagebreak
+\begin{task}{5.7}
+	Låt $Y(s)=\laplace(\theta y)(s)$.
+	\[\laplace(\theta y')(s)=s\laplace(\theta y)(s)-y(0)=sY(s)\]
+	\[\laplace(\theta y'')(s)=s\laplace(\theta y')(s)-y'(0)=s^2Y(s)\]
+	\[\laplace(\theta y''')(s)=s\laplace(\theta y'')(s)-y''(0)=s^3Y(s)\]
+	Multiplicera ekvationen med $\theta(t)$ och Laplacetransformera den:
+	\begin{align*}
+	&s^3Y(s)+3s^2Y(s)+3sY(s)+Y(s)=\frac{1}{(s+1)^2} \lra
+	(s^3+3s^2+3s+1)Y(s)=\frac{1}{(s+1)^2} \lra \\ \lra
+	&Y(s)=\frac{1}{(s+1)^2(s^3+3s^2+3s+1)}=
+	\frac{1}{(s+1)^5}=
+	\frac{1}{24}\*\frac{4!}{(s+1)^5} \llra
+	\frac{1}{24}e^{-t}t^4\theta(t)
+	\end{align*}
+	\[y(t)\theta(t)=\frac{1}{24}e^{-t}t^4\theta(t)\]
+	\[y(t)=\frac{1}{24}e^{-t}t^4\cond{t>0}\]
+	$y$ deriveras 2 gånger och då visar det sig att $y(0)=y'(0)=y''(0)=0$ vilket innebär att begynnelsevillkoren är uppfyllda, funktionen är alltså definierad även för $t=0$.
+	
+	\ans $y(t)=\frac{1}{24}e^{-t}t^4\cond{t\ge0}$
+\end{task}
