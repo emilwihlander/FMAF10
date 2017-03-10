@@ -623,3 +623,17 @@
 	\end{align*}
 	\ans $f(t)=\left(e^{-t}(-7+4t)+e^{-2t}(7+3t)\right)\theta(t)$
 \end{task}
+
+\begin{task}{4.15}
+	\begin{align*}
+	\laplace f(s)=
+	&\frac{(s-1)(s+1)}{(s+2)^2(s+1+2i)(s+1-2i)}=
+	\frac{s^2}{(s+2)^2((s+1)^2+4)}= \\ =
+	&\frac{k_1}{s+2}+\frac{k_2}{(s+2)^2}+\frac{k_3s+k_4}{(s+1)^2+4}= \\ =
+	&k_1\frac{1}{s+2}+k_2\frac{1}{(s+2)^2}+k_3\frac{s+1}{(s+1)^2+2^2}+\frac{k_4-1}{2}\*\frac{2}{(s+1)^2+2^2} \llra \\ \llra
+	&k_1e^{-2t}\theta(t)+k_2e^{-2t}t\theta(t)+k_3e^{-t}\cos(2t)\theta(t)+\frac{k_4-1}{2}e^{-t}\sin(2t)\theta(t)= \\ =
+	&\left(k_1e^{-2t}+k_2e^{-2t}t+k_3e^{-t}\cos(2t)+\frac{k_4-1}{2}e^{-t}\sin(2t)\right)\theta(t)= \\ =
+	&\left((k_1+k_2t)e^{-2t}+(k_3\cos(2t)+\frac{k_4-1}{2}\sin(2t))e^{-t}\right)\theta(t)= \\=
+	&\left((A+Bt)e^{-2t}+(C\cos(2t)+D\sin(2t))e^{-t}\right)\theta(t)
+	\end{align*}
+\end{task}
