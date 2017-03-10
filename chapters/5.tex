@@ -108,3 +108,72 @@
 	
 	\ans $y(t)=e^{-2t}+e^{-t}(t-1)\cond{t \ge 0}$
 \end{task}
+
+\pagebreak
+\begin{task}{5.4}
+	Låt $Y_1(s)=\laplace(\theta y_1)(s)$ och $Y_2(s)=\laplace(\theta y_2)(s)$ vilket medför att:
+	\[\laplace(\theta y_1')(s)=s\laplace(\theta y_1)(s)-y_1(0)=sY_1(s)-1\]
+	\[\laplace(\theta y_2')(s)=s\laplace(\theta y_2)(s)-y_2(0)=sY_2(s)\]
+	Multiplicera ekvationssystemet med $\theta(t)$:
+	\[
+	\begin{cases}
+	y_1\theta(t)-2y_2'\theta=2\theta \\
+	y_1'\theta(t)+2y_2=-2t\theta
+	\end{cases}\]
+	Laplacetransformera båda ekvationerna:
+	\[
+	\begin{cases}
+	Y_1(s)-2sY_2(s)=\frac{2}{s} \\
+	sY_1(s)-1+2Y_2(s)=-\frac{2}{s^2}
+	\end{cases} \lra
+	\begin{linsys}{rrr}
+	 Y_1(s)-&2sY_2(s)=&\frac{2}{s} \\
+	sY_1(s)+& 2Y_2(s)=&\frac{s^2-2}{s^2}
+	\end{linsys}\]
+	Använd Cramers regel:
+	\begin{align*}
+	\Delta(s)=\begin{detmat}
+	1 & -2s \\
+	s & 2
+	\end{detmat}=
+	2-(-2s)s=2(s^2+1)
+	\end{align*}
+	\begin{align*}
+	Y_1(s)=
+	\frac{1}{\Delta(s)}\begin{detmat}
+	\frac{2}{s} & -2s \\
+	\frac{s^2-2}{s^2} & 2
+	\end{detmat}=
+	\frac{1}{2(s^2+1)}\left(\frac{4}{s}-\frac{(-2s)(s^2-2)}{s^2}\right)=
+	\frac{s}{s^2+1}
+	\end{align*}
+	\begin{align*}
+	Y_2(s)=
+	\frac{1}{\Delta(s)}\begin{detmat}
+	1 &\frac{2}{s} \\
+	s &\frac{s^2-2}{s^2}
+	\end{detmat}=
+	\frac{1}{2(s^2+1)}\left(\frac{s^2-2}{s^2}-2\right)=
+	\frac{1}{2}\*\frac{1}{s^2+1}-\frac{1}{s^2}
+	\end{align*}
+	\[\begin{cases}
+	Y_1(s)=\frac{s}{s^2+1} \\
+	Y_2(s)=\frac{1}{2}\*\frac{1}{s^2+1}-\frac{1}{s^2}
+	\end{cases}\llra
+	\begin{cases}
+	y_1\theta=\cos(t)\theta(t) \\
+	y_2\theta=\frac{1}{2}\sin(t)\theta(t)-t\theta(t)
+	\end{cases}\]
+	Eftersom $\theta(t)=1$ endast när $t>0$ måste det läggas till som villkor:
+	\[\begin{cases}
+	y_1=\cos(t) \\
+	y_2=\frac{1}{2}\sin(t)-t
+	\end{cases}\cond{t > 0}\]
+	Eftersom $y_1(0)=\cos(0)=1$ och $y_2(0)=\frac{1}{2}\sin(0)-0=0$ är de de också definierade för $t=0$.
+	
+	\ans 
+	$\begin{cases}
+	y_1=\cos(t) \\
+	y_2=\frac{1}{2}\sin(t)-t
+	\end{cases}\cond{t \ge 0}$
+\end{task}
