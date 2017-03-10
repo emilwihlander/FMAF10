@@ -264,3 +264,48 @@
 	
 	\ans $y(t)=\frac{1}{24}e^{-t}t^4\cond{t\ge0}$
 \end{task}
+
+\pagebreak
+\begin{task}{5.8}
+	Låt $Y(s)=\laplace(\theta y)(s)$.
+	\[\laplace(\theta y')(s)=s\laplace(\theta y)(s)-y(0)=sY(s)\]
+	\[\laplace(\theta y'')(s)=s\laplace(\theta y')(s)-y'(0)=s^2Y(s)\]
+	Multiplicera ekvationen med $\theta(t)$ (notera $\theta(t-\alpha)\theta(t-\beta)=\theta(t-\alpha)\cond{\alpha \ge \beta}$):
+	\[y''\theta(t)+3y'\theta(t)+2y\theta(t)=\theta(t)\theta(t)-\theta(t-1)\theta(t) \lra
+	y''\theta(t)+3y'\theta(t)+2y\theta(t)=\theta(t)-\theta(t-1)\]
+	Laplacetransformera den:
+	\begin{align*}
+	&s^2Y(s)+3sY(s)+2Y(s)=\frac{1}{s}-e^{-s}\frac{1}{s} \lra
+	(s^2+3s+2)Y(s)=\frac{1-e^{-s}}{s} \lra \\ \lra
+	&Y(s)=
+	\frac{1-e^{-s}}{s(s^2+3s+2)}=
+	\frac{k_1}{s}+\frac{k_2}{s+1}+\frac{k_3}{s+2}-e^{-s}\left(\frac{k_1}{s}+\frac{k_2}{s+1}+\frac{k_3}{s+2}\right)
+	\end{align*}
+	Identifiera variablerna:
+	\begin{align*}
+	&k_1(s+1)(s+2)+k_2s(s+2)+k_3s(s+1)=1 \lra \\ \lra
+	&k_1(s^2+3s+2)+k_2(s^2+2s)+k_3(s^2+s)=1 \lra \\ \lra
+	&\begin{cases}
+	k_1+k_2+k_3=0 \\
+	3k_1+2k_2+k_3=0 \\
+	2k_1=1
+	\end{cases} \lra
+	\begin{cases}
+	k_1=\frac{1}{2} \\
+	k_2=-1 \\
+	k_3=\frac{1}{2}
+	\end{cases}
+	\end{align*}
+	\begin{align*}
+	Y(s)=
+	&\frac{1}{2}\*\frac{1}{s}-\frac{1}{s+1}+\frac{1}{2}\*\frac{1}{s+2}-e^{-s}\left(\frac{1}{2}\*\frac{1}{s}-\frac{1}{s+1}+\frac{1}{2}\*\frac{1}{s+2}\right)\llra \\ \llra
+	&(\frac{1}{2}-e^{-t}+\frac{1}{2}e^{-2t})\theta(t)-(\frac{1}{2}-e^{-(t-1)}+\frac{1}{2}e^{-2(t-1)})\theta(t-1)= \\ =
+	&\frac{1}{2}(1-2e^{-t}+e^{-2t})\theta(t)-\frac{1}{2}(1-2e^{-(t-1)}+e^{-2(t-1)})\theta(t-1)
+	\end{align*}
+	Notera att $\frac{\theta(t-\alpha)}{\theta(t)}=\theta(t-\alpha)\cond{t>0}$:
+	\[y(t)\theta(t)=\frac{1}{2}(1-2e^{-t}+e^{-2t})\theta(t)-\frac{1}{2}(1-2e^{-(t-1)}+e^{-2(t-1)})\theta(t-1)\]
+	\[y(t)=\frac{1}{2}(1-2e^{-t}+e^{-2t})\theta(t)-\frac{1}{2}(1-2e^{-(t-1)}+e^{-2(t-1)})\theta(t-1)\cond{t>0}\]
+	$y$ deriveras och då visar det sig att $y(0)=y'(0)=0$ vilket innebär att begynnelsevillkoren är uppfyllda, funktionen är alltså definierad även för $t=0$.
+	
+	\ans $y(t)=\frac{1}{2}(1-2e^{-t}+e^{-2t})\theta(t)-\frac{1}{2}(1-2e^{-(t-1)}+e^{-2(t-1)})\theta(t-1)\cond{t\ge0}$
+\end{task}
