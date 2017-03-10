@@ -177,3 +177,19 @@
 	y_2=\frac{1}{2}\sin(t)-t
 	\end{cases}\cond{t \ge 0}$
 \end{task}
+
+\begin{task}{5.5}
+	Eftersom differentialekvationen saknar begynnelsevillkor låt $Y(s)=\laplace y(s)$ 
+	\[sY(s)=\laplace y'(s),\qquad s^2Y(s)=\laplace y''(s)\]
+	Laplacetransformera ekvationen:
+	\begin{align*}
+	&s^2Y(s)+2sY(s)+2Y(s)=1 \lra
+	(s^2+2s+2)Y(s)=1\lra \\ \lra
+	&Y(s)=\frac{1}{s^2+2s+2}=
+	\frac{1}{(s+1)^2+1}\llra
+	e^{-t}\sin(t)\theta(t)
+	\end{align*}
+	Eftersom $\theta(t)$ är en faktor är lösningen kausal.
+	
+	\ans $y(t)=e^{-t}\sin(t)\theta(t)$
+\end{task}
