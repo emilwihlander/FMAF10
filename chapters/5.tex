@@ -309,3 +309,44 @@
 	
 	\ans $y(t)=\frac{1}{2}(1-2e^{-t}+e^{-2t})\theta(t)-\frac{1}{2}(1-2e^{-(t-1)}+e^{-2(t-1)})\theta(t-1)\cond{t\ge0}$
 \end{task}
+
+\begin{task}{5.9}
+	Låt $Y(s)=\laplace(\theta y)(s)$.
+	\[\laplace(\theta y')(s)=s\laplace(\theta y)(s)-y(0)=sY(s)\]
+	\[\laplace(\theta y'')(s)=s\laplace(\theta y')(s)-y'(0)=s^2Y(s)\]
+	\[\laplace(\theta y''')(s)=s\laplace(\theta y'')(s)-y''(0)=s^3Y(s)-1\]
+	Multiplicera ekvationen med $\theta(t)$ och Laplacetransformera den:
+	\begin{align*}
+	&s^3Y(s)-1-s^2Y(s)+sY(s)-Y(s)=\frac{1}{s^2} \lra
+	(s^3-s^2+s-1)Y(s)=\frac{1}{s^2}+1 \lra \\ \lra
+	&Y(s)=\frac{s^2+1}{s^2(s^3-s^2+s-1)}=
+	\frac{s^2+1}{s^2(s-1)(s^2+1)}=
+	\frac{1}{s^2(s-1)}=
+	\frac{k_1}{s}+\frac{k_2}{s^2}+\frac{k_3}{s-1}
+	\end{align*}
+	Identifiera variablerna:
+	\begin{align*}
+	&k_1s(s-1)+k_2(s-1)+k_3s^2=1 \lra \\ \lra
+	&k_1(s^2-s)+k_2(s-1)+k_3s^2=1 \lra \\ \lra
+	&\begin{cases}
+	k_1+k_3=0 \\
+	-k_1+k_2=0 \\
+	-k_2=1
+	\end{cases} \lra
+	\begin{cases}
+	k_1=-1 \\
+	k_2=-1 \\
+	k_3=1
+	\end{cases}
+	\end{align*}
+	\begin{align*}
+	Y(s)=-\frac{1}{s}-\frac{1}{s^2}+\frac{1}{s-1} \llra
+	-\theta(t)-t\theta(t)+e^{t}\theta(t)=
+	(e^{t}-t-1)\theta(t)
+	\end{align*}
+	\[y(t)\theta(t)=(e^{t}-t-1)\theta(t)\]
+	\[y(t)=e^{t}-t-1\cond{t>0}\]
+	$y$ deriveras 2 gånger och då visar det sig att $y(0)=y'(0)=0$, $y''(0)=1$ vilket innebär att begynnelsevillkoren är uppfyllda, funktionen är alltså definierad även för $t=0$.
+	
+	\ans $y(t)=e^{t}-t-1\cond{t\ge0}$
+\end{task}
