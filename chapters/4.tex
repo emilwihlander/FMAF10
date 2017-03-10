@@ -592,3 +592,34 @@
 	\end{align*}
 	\ans $f(t)=\frac{1}{\alpha}\left(\frac{1}{\alpha}e^{-\alpha t}-\frac{1}{\alpha}+t\right)\theta(t)$
 \end{task}
+
+\begin{task}{4.14}
+	låt $\laplace f(s)=\dfrac{s+5}{(s+1)^2(s+2)^2}$.
+	\begin{align*}
+	\frac{s+5}{(s+1)^2(s+2)^2}=
+	\frac{k_1}{s+1}+\frac{k_2}{(s+1)^2}+\frac{k_3}{s+2}+\frac{k_4}{(s+2)^2}
+	\end{align*}
+	\begin{align*}
+	&k_1(s+1)(s+2)^2+k_2(s+2)^2+k_3(s+1)^2(s+2)+k_4(s+1)^2=1\lra \\ \lra
+	&k_1(s^3+5s^2+8s+4)+k_2(s^2+4s+4)+k_3(s^3+4s^2+5s+2)+k_4(s^2+2s+1) \lra \\ \lra
+	&\begin{cases}
+	k_1+k_3=0 \\
+	5k_1+k_2+4k_3+k_4=0 \\
+	8k_1+4k_2+5k_3+2k_4=1 \\
+	4k_1+4k_2+2k_3+k_4=5
+	\end{cases}\lra
+	\begin{cases}
+	k_1=-7 \\
+	k_2=4 \\
+	k_3=7 \\
+	k_4=3
+	\end{cases}
+	\end{align*}
+	\begin{align*}
+	\laplace f(s)=
+	&-7\frac{1}{s+1}+4\frac{1}{(s+1)^2}+7\frac{1}{s+2}+3\frac{1}{(s+2)^2}\llra \\ \llra
+	&-7e^{-t}\theta(t)+4e^{-t}t\theta(t)+7e^{-2t}\theta(t)+3e^{-2t}t\theta(t)=
+	\left(e^{-t}(-7+4t)+e^{-2t}(7+3t)\right)\theta(t)
+	\end{align*}
+	\ans $f(t)=\left(e^{-t}(-7+4t)+e^{-2t}(7+3t)\right)\theta(t)$
+\end{task}
