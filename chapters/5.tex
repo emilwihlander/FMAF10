@@ -193,3 +193,52 @@
 	
 	\ans $y(t)=e^{-t}\sin(t)\theta(t)$
 \end{task}
+
+\begin{task}{5.6}
+	För att använda Laplacetransformation med begynnelsevärden måste $t > 0$. Så börja med att hitta lösningen för det intervallet och utvidga lösningen efter.
+	
+	Låt $Y(s)=\laplace(\theta y)(s)$.
+	\[\laplace(\theta y')(s)=s\laplace(\theta y)(s)-y(0)=sY(s)\]
+	\[\laplace(\theta y'')(s)=s\laplace(\theta y')(s)-y'(0)=s^2Y(s)\]
+	\[\laplace(\theta y^{(3)})(s)=s\laplace(\theta y'')(s)-y''(0)=s^3Y(s)\]
+	\[\laplace(\theta y^{(4)})(s)=s\laplace(\theta y^{(3)})(s)-y^{(3)}(0)=s^4Y(s)-1\]
+	Multiplicera ekvationen med $\theta(t)$ och Laplacetransformera den:
+	\begin{align*}
+	&s^4Y(s)-1=Y(s) \lra
+	(s^4-1)Y(s)=1 \lra \\ \lra
+	Y(s)=&\frac{1}{s^4-1}=
+	\frac{1}{(s^2+1)(s+1)(s-1)}=
+	\frac{k_1s+k_2}{s^2+1}+\frac{k_3}{s+1}+\frac{k_4}{s-1}
+	\end{align*}
+	Identifiera variablerna:
+	\begin{align*}
+	&(k_1s+k_2)(s+1)(s-1)+k_3(s^2+1)(s-1)+k_4(s^2+1)(s+1)=1 \lra \\ \lra
+	&k_1(s^3-s)+k_2(s^2-1)+k_3(s^3-s^2+s-1)+k_4(s^3+s^2+s+1)=1 \lra \\ \lra
+	&\begin{cases}
+	k_1+k_3+k_4=0 \\
+	k_2-k_3+k_4=0 \\
+	-k_1+k_3+k_4=0 \\
+	-k_2-k_3+k_4=1
+	\end{cases} \lra
+	\begin{cases}
+	k_1=0 \\
+	k_2=-\frac{1}{2} \\
+	k_3=-\frac{1}{4} \\
+	k_4=\frac{1}{4}
+	\end{cases}
+	\end{align*}
+	\begin{align*}
+	Y(s)=
+	&-\frac{1}{2}\*\frac{1}{s^2+1}-\frac{1}{4}\frac{1}{s+1}+\frac{1}{4}\*\frac{1}{s-1}=
+	\frac{1}{4}\left(\frac{1}{s-1}-\frac{1}{s+1}-2\frac{1}{s^2+1}\right) \llra \\ \llra
+	&\frac{1}{4}(e^{t}\theta(t)-e^{-t}\theta(t)-\sin(t)\theta(t))=
+	\frac{1}{4}(e^{t}-e^{-t}-2\sin(t))\theta(t)
+	\end{align*}
+	\[y(t)\theta(t)=\frac{1}{4}(e^{t}-e^{-t}-2\sin(t))\theta(t)\]
+	\[y(t)=\frac{1}{4}(e^{t}-e^{-t}-2\sin(t))\cond{t>0}\]
+	$y$ deriveras 3 gånger och då visar det sig att $y(0)=y'(0)=y''(0)=0$, $y^{(3)}(0)=1$ vilket innebär att begynnelsevillkoren är uppfyllda.
+	
+	Eftersom termerna är definierade för $t<0$ och deriveras på samma sätt för negativa värden kan intervallet för $t$ utvidgas till $t\in\mathbb{R}$.
+	
+	\ans $y(t)=\frac{1}{4}(e^{t}-e^{-t}-2\sin(t))\cond{t\in\mathbb{R}}$
+\end{task}
