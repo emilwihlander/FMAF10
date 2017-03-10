@@ -39,5 +39,29 @@
 	\end{align*}
 	\[y(t)\theta(t)=\frac{e^{-t}}{4}\left(1+3\cos(2t)+6\sin(2t)\right)\theta(t)\]
 	\[y(t)=\frac{e^{-t}}{4}\left(1+3\cos(2t)+6\sin(2t)\right)\]
+	Eftersom $y(0)=\frac{e^0}{4}(1+3\cos(0)+6\sin(0))=1$ är funktionen, utöver $t>0$, definierad för $t=0$.
+	
 	\ans $y(t)=\frac{e^{-t}}{4}\left(1+3\cos(2t)+6\sin(2t)\right)\cond{t \ge 0}$
+\end{task}
+
+\begin{task}{5.2}
+	Låt $Y(s)=\laplace(\theta y)(s)$ vilket medför att:
+	\[\laplace(\theta y')(s)=s\laplace(\theta y)(s)-y(0)=sY(s)\]
+	\[\laplace(\theta y'')(s)=s\laplace(\theta y')(s)-y'(0)=s^2Y(s)-1\]
+	Multiplicera vänsterledet med $\theta(t)$ och hitta Laplacetransformparet:
+	\[y''(t)\theta(t)-2y'(t)\theta(t)+2y(t)\theta(t) \llra
+	s^2Y(s)-s-2+2(sY(s)-1)+5Y(s)=\frac{1}{s+1}\]
+	\begin{align*}
+	&s^2Y(s)-1-2sY(s)+2Y(s)=0 \lra
+	(s^2-2s+2)Y(s)=1 \lra \\ \lra
+	&Y(s)=
+	\frac{1}{s^2-2s+2}=
+	\frac{1}{(s-1)^2+1} \llra
+	e^{t}\sin(t)\theta(t)
+	\end{align*}
+	\[y(t)\theta(t)=e^{t}\sin(t)\theta(t)\]
+	\[y(t)=e^{t}\sin(t)\]
+	Eftersom $y(0)=e^{0}\sin(0)=0$ är funktionen, utöver $t>0$, definierad för $t=0$.
+	
+	\ans $y(t)=e^{t}\sin(t)\cond{t \ge 0}$
 \end{task}
