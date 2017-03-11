@@ -433,3 +433,15 @@
 	
 	\ans $y(t)=\frac{1}{10}\left(\cos(t)+3\sin(t)-5e^{-t}+4e^{-2t}\right)\cond{t\ge0}$
 \end{task}
+
+\begin{task}{5.13 a)}
+	\[f(t)=t(\theta(t)-\theta(t-1))-t(\theta(t-1)-\theta(t-2))=t\theta(t)-2t\theta(t-1)+t\theta(t-2)\]
+	Hitta $f$s Laplacetransformpar:
+	\[\laplace f(s)=\frac{1}{s^2}-2e^{-s}\frac{1}{s^2}+e^{-2s}\frac{1}{s^2}=\frac{1-2e^{-s}+e^{-2s}}{s^2}\]
+	Utnyttja regeln $f'(t)\llra sF(s)$:
+	\[\laplace f'(s)=s\frac{1-2e^{-s}+e^{-2s}}{s^2}=\frac{1-2e^{-s}+e^{-2s}}{s}\]
+	\[\laplace f''(s)=s\frac{1-2e^{-s}+e^{-2s}}{s}=1-2e^{-s}+e^{-2s}\]
+	Hitta inversen:
+	\[f''(t)=\delta(t)-2\delta(t-1)+\delta(t-2)\]
+	\ans $f''(t)=\delta(t)-2\delta(t-1)+\delta(t-2)$
+\end{task}
