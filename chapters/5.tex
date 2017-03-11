@@ -461,3 +461,86 @@
 	
 	\ans $y(t)=e^{-t}\sin(t)\theta(t)-2e^{-(t-1)}\sin(t-1)\theta(t-1)+e^{-(t-2)}\sin(t-2)\theta(t-2)$
 \end{task}
+
+\pagebreak
+\begin{task}{5.14}
+	Låt $X(s)=\laplace(\theta x)(s)$ och $Y(s)=\laplace(\theta y)(s)$ vilket medför att:
+	\[\laplace(\theta x')(s)=s\laplace(\theta x)(s)-x(0)=sX(s)\]
+	\[\laplace(\theta x'')(s)=s\laplace(\theta x')(s)-x'(0)=s^2X(s)\]
+	\[\laplace(\theta y')(s)=s\laplace(\theta y)(s)-y(0)=sY(s)-1\]
+	\[\laplace(\theta y'')(s)=s\laplace(\theta y')(s)-y'(0)=s^2Y(s)-s\]
+	Multiplicera ekvationssystemet med $\theta(t)$:
+	\[
+	\begin{cases}
+	x''(t)\theta(t)+2x(t)\theta(t)+y'(t)\theta(t)=0 \\
+	y''(t)\theta(t)+2y(t)\theta(t)-x'(t)\theta(t)=0
+	\end{cases}\]
+	Laplacetransformera båda ekvationerna:
+	\[
+	\begin{cases}
+	s^2X+2X+sY-1=0\\
+	s^2Y-s+2Y-sX=0
+	\end{cases} \lra
+	\begin{linsys}{rrr}
+	(s^2+2)X+&sY=&1 \\
+	-sX+&(s^2+2)Y=&s
+	\end{linsys}\]
+	Använd Cramers regel:
+	\begin{align*}
+	\Delta(s)=\begin{detmat}
+	s^2+2 & s \\
+	-s & s^2+2
+	\end{detmat}=
+	(s^2+2)^2+s^2=
+	(s^2+4)(s^2+1)
+	\end{align*}
+	\begin{align*}
+	X(s)=
+	\frac{1}{\Delta(s)}\begin{detmat}
+	1 & s \\
+	s & s^2+2
+	\end{detmat}=
+	\frac{1}{(s^2+4)(s^2+1)}\left(s^2+2-s^2\right)=
+	\frac{2}{(s^2+4)(s^2+1)}
+	\end{align*}
+	\begin{align*}
+	Y(s)=
+	\frac{1}{\Delta(s)}\begin{detmat}
+	s^2+2 & 1 \\
+	-s & s
+	\end{detmat}=
+	\frac{1}{(s^2+4)(s^2+1)}\left(s^3+2s+s\right)=
+	\frac{s^3+3s}{(s^2+4)(s^2+1)}
+	\end{align*}
+	Hitta lösningar till $X$ och $Y$ var för sig: 
+	\begin{align*}
+	X(s)=
+	\frac{2}{(s^2+4)(s^2+1)}=
+	\frac{2}{3}\left(\frac{1}{s^2+1}-\frac{1}{2}\*\frac{2}{s^2+4}\right)\llra
+	&\frac{1}{3}(2\sin(t)\theta(t)-\sin(2t)\theta(t))= \\ =
+	&\frac{1}{3}(2\sin(t)-\sin(2t))\theta(t)
+	\end{align*}
+	\begin{align*}
+	Y(s)=
+	\frac{s^3+3s}{(s^2+4)(s^2+1)}=
+	\frac{1}{3}\left(2\frac{s}{s^2+1}+\frac{s}{s^2+4}\right)\llra
+	&\frac{1}{3}\left(2\cos(t)\theta(t)+\cos(2t)\theta(t)\right)= \\ =
+	&\frac{1}{3}\left(2\cos(t)+\cos(2t)\right)\theta(t)
+	\end{align*}
+	\[\begin{cases}
+	x\theta=\frac{1}{3}(2\sin(t)-\sin(2t))\theta(t) \\
+	y\theta=\frac{1}{3}(2\cos(t)+\cos(2t))\theta(t)
+	\end{cases}\]
+	Eftersom $\theta(t)=1$ endast när $t>0$ måste det läggas till som villkor:
+	\[\begin{cases}
+	x=\frac{1}{3}(2\sin(t)-\sin(2t)) \\
+	y=\frac{1}{3}(2\cos(t)+\cos(2t))
+	\end{cases}\cond{t > 0}\]
+	$y$ och $x$ deriveras och då visar det sig att $x(0)=x'(0)=y'(0)=0$, $y(0)=1$ vilket innebär att begynnelsevillkoren är uppfyllda, funktionen är alltså definierad även för $t=0$.
+	
+	\ans 
+	$\begin{cases}
+	x=\frac{1}{3}(2\sin(t)-\sin(2t)) \\
+	y=\frac{1}{3}(2\cos(t)+\cos(2t))
+	\end{cases}\cond{t \ge 0}$
+\end{task}
