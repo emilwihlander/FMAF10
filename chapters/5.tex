@@ -366,3 +366,26 @@
 	
 	\ans $y(t)=\frac{1}{2}e^{-t}t^2\theta(t)\cond{-\infty<t<+\infty}$
 \end{task}
+
+\begin{task}{5.11}
+	Eftersom differentialekvationen högerled innehåller $\delta(t)$ låt $Y(s)=\laplace y(s)$ ($\delta(t)\theta(t)$ saknar betydelse)
+	\[sY(s)=\laplace y'(s),\qquad s^2Y(s)=\laplace y''(s)\]
+	Laplacetransformera ekvationen:
+	\begin{align*}
+	&s^2Y(s)+sY(s)=1-2e^{-s}+\frac{1}{s}-e^{-s}\frac{1}{s} \lra
+	(s^2+s)Y(s)=\frac{s-2se^{-s}+1-e^{-s}}{s}\lra \\ \lra
+	&Y(s)=\frac{s-2se^{-s}+1-e^{-s}}{s(s^2+s)}=
+	\frac{1}{s(s+1)}-2\frac{e^{-s}}{s(s+1)}+\frac{1}{s^2(s+1)}-\frac{e^{-s}}{s^2(s+1)}= \\ =
+	&\frac{1}{s}-\frac{1}{s+1}-2e^{-s}\left(\frac{1}{s}-\frac{1}{s+1}\right)-\frac{1}{s}+\frac{1}{s^2}+\frac{1}{s+1}-e^{-s}\left(-\frac{1}{s}+\frac{1}{s^2}+\frac{1}{s+1}\right)= \\ =
+	&\frac{1}{s^2}-e^{-s}\left(\frac{1}{s}+\frac{1}{s^2}-\frac{1}{s+1}\right) \llra
+	t\theta(t)-(\theta(t-1)+(t-1)\theta(t-1)-e^{-(t-1)}\theta(t-1))= \\ =
+	&t\theta(t)-(t-e^{-(t-1)})\theta(t-1)
+	\end{align*}
+	Eftersom $\theta(t-\alpha)\cond{\alpha \ge 0}$ är en faktor är $y$ kausal.
+	
+	För att enklare kunna rita den:
+	\[y(t)=t\theta(t)-(t-e^{-(t-1)})\theta(t-1)=t(\theta(t)-\theta(t-1))+e^{-(t-1)}\theta(t-1)\]
+	Funktionen $t$ i intervallet $0<t<1$, funktionen $e^{-(t-1)}$ i intervallet $1<t<\infty$
+	
+	\ans $y(t)=t(\theta(t)-\theta(t-1))+e^{-(t-1)}\theta(t-1)$
+\end{task}
