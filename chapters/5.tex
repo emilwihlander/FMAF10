@@ -544,3 +544,128 @@
 	y=\frac{1}{3}(2\cos(t)+\cos(2t))
 	\end{cases}\cond{t \ge 0}$
 \end{task}
+
+\begin{task}{5.15}
+	Låt $X(s)=\laplace(\theta x)(s)$ och $Y(s)=\laplace(\theta y)(s)$ vilket medför att:
+	\[\laplace(\theta x')(s)=s\laplace(\theta x)(s)-x(0)=sX(s)\]
+	\[\laplace(\theta y')(s)=s\laplace(\theta y)(s)-y(0)=sY(s)-1\]
+	Multiplicera ekvationssystemet med $\theta(t)$:
+	\[
+	\begin{cases}
+	x'(t)\theta(t)+2x(t)\theta(t)+y'(t)\theta(t)=0 \\
+	2x'(t)\theta(t)+3x(t)\theta(t)+2y'(t)\theta(t)+y(t)\theta(t)=0
+	\end{cases}\]
+	Laplacetransformera båda ekvationerna:
+	\[
+	\begin{cases}
+	sX(s)+2X(s)+sY(s)-1=0 \\
+	2sX(s)+3X(s)+2(sY(s)-1)+Y(s)=0
+	\end{cases} \lra
+	\begin{linsys}{rrr}
+	(s+2)X+&sY=&1 \\
+	(2s+3)X+&(2s+1)Y=&2
+	\end{linsys}\]
+	Använd Cramers regel:
+	\begin{align*}
+		\Delta(s)=\begin{detmat}
+			s+2 & s \\
+			2s+3 & 2s+1
+		\end{detmat}=
+		(s+2)(2s+1)-s(2s+3)=
+		2(s+1)
+	\end{align*}
+	\begin{align*}
+		X(s)=
+		\frac{1}{\Delta(s)}\begin{detmat}
+			1 & s \\
+			2 & 2s+1
+		\end{detmat}=
+		\frac{1}{2(s+1)}\left(2s+1-2s\right)=
+		\frac{1}{2}\*\frac{1}{s+1}
+	\end{align*}
+	\begin{align*}
+		Y(s)=
+		\frac{1}{\Delta(s)}\begin{detmat}
+			s+2 & 1 \\
+			2s+3 & 2
+		\end{detmat}=
+		\frac{1}{2(s+1)}\left(2(s+2)-(2s+3)\right)=
+		\frac{1}{2}\*\frac{1}{s+1}
+	\end{align*}
+	Hitta lösningen till $X$ och $Y$: 
+	\begin{align*}
+		X(s)=Y(s)=
+		\frac{1}{2}\*\frac{1}{s+1}\llra
+		\frac{1}{2}e^{-t}\theta(t)
+	\end{align*}
+	Eftersom $\theta(t)=1$ endast när $t>0$ måste det läggas till som villkor:
+	\[x\theta=y\theta=\frac{1}{2}e^{-t}\theta(t)\lra x=y=\frac{1}{2}e^{-t}\cond{t>0}\]
+	$x(0)=y(0)=\frac{1}{2}e^{0}=\frac{1}{2}$ vilket innebär att begynnelsevillkoren inte är uppfyllda, det saknas alltså en lösning till ekvationssystemet.
+	
+	\ans lösning saknas
+\end{task}
+
+\begin{task}{5.16}
+	Eftersom en av differentialekvationernas högerled är $\delta(t-1)$ låt $X(s)=\laplace x(s)$ och $Y(s)=\laplace y(s)$ ($\delta(t)\theta(t)$ saknar betydelse)
+	\[\laplace x'(s)=sX(s)\]
+	\[\laplace y'(s)=sY(s)\]
+	Laplacetransformera båda ekvationerna:
+	\[
+	\begin{cases}
+	sX(s)+Y(s)=e^{-s} \\
+	sY(s)-X(s)=\frac{1}{s}
+	\end{cases} \lra
+	\begin{linsys}{rrr}
+	sX+&Y=&e^{-s} \\
+	-X+&sY=&\frac{1}{s}
+	\end{linsys}\]
+	Använd Cramers regel:
+	\begin{align*}
+	\Delta(s)=\begin{detmat}
+	s & 1 \\
+	-1 & s
+	\end{detmat}=
+	s^2-(-1)=
+	s^2+1
+	\end{align*}
+	\begin{align*}
+	X(s)=
+	\frac{1}{\Delta(s)}\begin{detmat}
+	e^{-s} & 1 \\
+	\frac{1}{s} & s
+	\end{detmat}=
+	\frac{1}{s^2+1}\left(se^{-s}-\frac{1}{s}\right)=
+	e^{-s}\frac{s}{s^2+1}-\left(\frac{1}{s}-\frac{s}{s^2+1}\right)
+	\end{align*}
+	\begin{align*}
+	Y(s)=
+	\frac{1}{\Delta(s)}\begin{detmat}
+	s & e^{-s} \\
+	-1 & \frac{1}{s}
+	\end{detmat}=
+	\frac{1}{s^2+1}\left(1-(-e^{-s})\right)=
+	e^{-s}\frac{1}{s^2+1}+\frac{1}{s^2+1}
+	\end{align*}
+	Hitta lösningar till $x$ och $y$ var för sig: 
+	\begin{align*}
+	X(s)=
+	e^{-s}\frac{s}{s^2+1}-\left(\frac{1}{s}-\frac{s}{s^2+1}\right)\llra
+	\cos(t-1)\theta(t-1)-\theta(t)+\cos(t)\theta(t)
+	\end{align*}
+	\begin{align*}
+	Y(s)=
+	e^{-s}\frac{1}{s^2+1}+\frac{1}{s^2+1} \llra
+	\sin(t-1)\theta(t-1)+\sin(t)\theta(t)
+	\end{align*}
+	\[\begin{cases}
+	x=\cos(t-1)\theta(t-1)-\theta(t)+\cos(t)\theta(t) \\
+	y=\sin(t-1)\theta(t-1)+\sin(t)\theta(t)
+	\end{cases}\cond{t > 0}\]
+	Eftersom $\theta(t-\alpha)\cond{\alpha\ge 0}$ är en faktor i alla termerna är $y$ och $x$ kausala.
+	
+	\ans
+	$\begin{cases}
+	x=\cos(t-1)\theta(t-1)-\theta(t)+\cos(t)\theta(t) \\
+	y=\sin(t-1)\theta(t-1)+\sin(t)\theta(t)
+	\end{cases}\cond{-\infty < t < +\infty}$
+\end{task}
