@@ -1,0 +1,16 @@
+\chapter{6}{Faltning}
+
+\begin{task}{6.1}
+	Använd definitionen av faltning:
+	\begin{align*}
+	f*g(t)=
+	&\int_{-\infty}^{+\infty}\! f(t-\tau)g(\tau)\, d\tau=
+	\int_{-\infty}^{+\infty}\! e^{-(t-\tau)}\theta(t-\tau)e^{-3\tau}\theta(\tau)\, d\tau=
+	\left(\int_{0}^{t}\! e^{-(t-\tau)-3\tau}\, d\tau\right)\theta(t)= \\ =
+	&\left(\int_{0}^{t}\! e^{-t-2\tau}\, d\tau\right)\theta(t)=
+	\left[-\frac{e^{-t-2\tau}}{2}\right]_0^t\theta(t)=
+	\left(-\frac{e^{-3t}}{2}-\left(-\frac{e^{-t}}{2}\right)\right)\theta(t)=
+	\frac{1}{2}(e^{-t}-e^{-3t})\theta(t)
+	\end{align*}
+	\ans $f*g(t)=\frac{1}{2}(e^{-t}-e^{-3t})\theta(t)$
+\end{task}
