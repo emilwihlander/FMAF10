@@ -53,3 +53,17 @@
 \begin{task}{6.4 a)}
 	\[f*g(t)=\int_{-\infty}^{+\infty}\!f(t-\tau)g(\tau)\, d\tau\]
 \end{task}
+
+\begin{task}{6.4 b)}
+	Låt $f\theta$ och $g\theta$ vara två kausala funktioner, definitionen av faltning ger då:
+	\[(f\theta)*(g\theta)(t)=
+	\int_{-\infty}^{+\infty}\!f(t-\tau)\theta(t-\tau)g(\tau)\theta(\tau)\, d\tau\]
+	Eftersom $\theta(t-\tau)\theta(\tau)\equiv0\cond{t\le 0}$ och $\theta(t-\tau)\theta(\tau)=0\cond{0\le\tau\le t}\cond{t > 0}$ är:
+	\[(f\theta)*(g\theta)(t)=\begin{linsys}{ll}
+	\int_{0}^{t}\!f(t-\tau)g(\tau)\, d\tau&\cond{t\le0} \\
+	0                                     &\cond{t>0}
+	\end{linsys}\]
+	Vilket också kan beskrivas som:
+	\[(f\theta)*(g\theta)(t)=
+	\left(\int_{0}^{t}\!f(t-\tau)g(\tau)\, d\tau\right)\theta(t)\]
+\end{task}
