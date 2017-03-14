@@ -14,3 +14,22 @@
 	\end{align*}
 	\ans $f*g(t)=\frac{1}{2}(e^{-t}-e^{-3t})\theta(t)$
 \end{task}
+
+\begin{task}{6.2}
+	\begin{align*}
+	\laplace f(s)=
+	\laplace (e^{-t}\theta)(s)=
+	\frac{1}{s+1}
+	\end{align*}
+	\begin{align*}
+	\laplace g(s)=
+	\laplace (e^{-3t}\theta)(s)=
+	\frac{1}{s+3}
+	\end{align*}
+	\begin{align*}
+	\laplace (f*g)(s)=
+	\laplace (\frac{1}{2}(e^{-t}-e^{-3t})\theta)(s)=
+	\frac{1}{2}\*\frac{1}{s+1}-\frac{1}{2}\*\frac{1}{s+3}=
+	\frac{1}{(s+1)(s+3)}
+	\end{align*}
+\end{task}
