@@ -85,3 +85,18 @@
 	\laplace f(s)\*\laplace g(s)\mproof
 	\end{align*}
 \end{task}
+
+\begin{task}{6.5}
+	\[\laplace f(s)=\frac{2}{s^3},\qquad
+	\laplace g(s)=\frac{24}{s^5}\]
+	\begin{align*}
+	\laplace v(s)=
+	\laplace(f*g)(s)=
+	\laplace f(s)\*\laplace g(s)=
+	\frac{2}{s^3}\*\frac{24}{s^5}=
+	\frac{48}{s^8}=\frac{1}{105}\*\frac{7!}{s^8}\llra
+	\frac{t^{7}}{105}\theta(t)=
+	v(t)
+	\end{align*}
+	\ans $v(t)=\dfrac{t^{7}}{105}\theta(t)$
+\end{task}
