@@ -33,3 +33,19 @@
 	\frac{1}{(s+1)(s+3)}
 	\end{align*}
 \end{task}
+
+\begin{task}{6.3}
+	Gör ett variabelbyte i integralen för att bevisa lagen.
+	\begin{align*}
+	f*g(t)=
+	&\int_{-\infty}^{+\infty}\!f(t-\tau)g(\tau)\, d\tau=
+	\begin{bmatrix}
+	x=t-\tau \\
+	\tau=t-x \\
+	d\tau=-dx
+	\end{bmatrix}=
+	-\int_{+\infty}^{-\infty}\!f(x)g(t-x)\, dx= \\ =
+	&\int_{-\infty}^{+\infty}\!g(t-x)f(x)\, dx=
+	g*f(t)\mproof
+	\end{align*}
+\end{task}
