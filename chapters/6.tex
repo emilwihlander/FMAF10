@@ -100,3 +100,37 @@
 	\end{align*}
 	\ans $v(t)=\dfrac{t^{7}}{105}\theta(t)$
 \end{task}
+
+\begin{task}{6.6}
+	Använd regeln $\laplace (f*g)(s)=\laplace f(s)\*\laplace g(s)$:
+	\[\laplace f(s)=\frac{1}{(s+3)^2},\qquad
+	\laplace g(s)=\frac{1}{s+1}\]
+	\begin{align*}
+	\laplace(f*g)(s)=
+	\laplace f(s)\*\laplace g(s)=
+	\frac{1}{(s+3)^2}\*\frac{1}{s+1}=
+	\frac{k_1}{(s+3)^2}+\frac{k_2}{s+3}+\frac{k_3}{s+1}
+	\end{align*}
+	Identifiera variablerna:
+	\begin{align*}
+	&k_1(s+1)+k_2(s+3)(s+1)+k_3(s+3)^2=1 \lra \\ \lra
+	&k_1(s+1)+k_2(s^2+4s+3)+k_3(s^2+6s+9)=1 \lra \\ \lra
+	&\begin{cases}
+	k_2+k_3=0 \\
+	k_1+4k_2+6k_3=0 \\
+	k_1+3k_2+9k_3=1
+	\end{cases} \lra
+	\begin{cases}
+	k_1=-\frac{1}{2} \\
+	k_2=-\frac{1}{4} \\
+	k_3=\frac{1}{4}
+	\end{cases}
+	\end{align*}
+	\begin{align*}
+	\laplace (f*g)(s)=
+	-\frac{1}{2}\*\frac{1}{(s+3)^2}-\frac{1}{4}\*\frac{1}{s+3}+\frac{1}{4}\*\frac{1}{s+1} \llra
+	&-\frac{1}{2}te^{-3t}\theta(t)-\frac{1}{4}e^{-3t}\theta(t)+\frac{1}{4}e^{-t}\theta(t)= \\ =
+	&\frac{1}{4}(e^{-t}-(2t+1)e^{-3t})\theta(t)
+	\end{align*}
+	\ans $f*g(t)=\frac{1}{4}(e^{-t}-(2t+1)e^{-3t})\theta(t)$
+\end{task}
