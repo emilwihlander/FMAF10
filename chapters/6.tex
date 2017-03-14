@@ -197,3 +197,49 @@
 	\end{align*}
 	\ans $y(t)=\int_{0}^{t}\!\sin(t-\tau)f(t)\, d\tau\cond{t>0}$
 \end{task}
+
+\begin{task}{6.10}
+	Låt $G(s)=\laplace(\cos\theta)(s)$ och $F(s)=\laplace(f\theta)(s)$.
+	\[G(s)=\frac{s}{s^2+1}\]
+	Använd definitionen av faltning baklänges:
+	\begin{align*}
+	\int_{0}^{t}\!\cos(t-\tau)f(\tau)\, d\tau=
+	\int_{-\infty}^{+\infty}\!\cos(t-\tau)\theta(t-\tau)f(\tau)\theta(\tau)\, d\tau=
+	\cos(t)\theta(t)*f(t)\theta(t)
+	\end{align*}
+	Sätt in i ekvationen:
+	\[\cos(t)\theta(t)*f(t)\theta(t)=\sin(2t)\cond{t>0}\]
+	Multiplicera ekvationen med $\theta(t)$ (notera att $\theta(t)\*\theta(t)=\theta(t)$):
+	\[\cos(t)\theta(t)*f(t)\theta(t)=\sin(2t)\theta(t)\]
+	Hitta Laplacetransformen:
+	\begin{align*}
+	&G(s)F(s)=\frac{2}{s^2+4} \lra
+	\frac{s}{s^2+1}F(s)=\frac{2}{s^2+4} \lra \\ \lra
+	&F(s)=
+	\frac{2s^2+2}{s(s^2+4)}=
+	\frac{k_1}{s}+\frac{k_2s+k_3}{s^2+4}
+	\end{align*}
+	Identifiera variablerna:
+	\begin{align*}
+	&k_1(s^2+4)+(k_2s+k_3)s=1 \lra
+	\begin{cases}
+	k_1+k_2=2 \\
+	k_3=0 \\
+	4k_1=2
+	\end{cases} \lra
+	\begin{cases}
+	k_1=\frac{1}{2} \\
+	k_2=\frac{3}{2} \\
+	k_3=0
+	\end{cases}
+	\end{align*}
+	\begin{align*}
+	F(s)=
+	\frac{1}{2}\left(\frac{1}{s}+3\frac{s}{s^2+4}\right) \llra
+	\frac{1}{2}\left(\theta(t)+3\cos(2t)\theta(t)\right)=
+	\frac{1}{2}\left(1+3\cos(2t)\right)\theta(t)
+	\end{align*}
+	\[f(t)\theta(t)=\frac{1}{2}\left(1+3\cos(2t)\right)\theta(t)\lra
+	f(t)=\frac{1}{2}\left(1+3\cos(2t)\right)\cond{t>0}\]
+	\ans $f(t)=\frac{1}{2}\left(1+3\cos(2t)\right)\cond{t>0}$
+\end{task}
