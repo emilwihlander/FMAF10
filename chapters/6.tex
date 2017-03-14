@@ -148,3 +148,22 @@
 	\end{align*}
 	\ans $u(t)=\pm\sqrt{6}te^{-t}\theta(t)$
 \end{task}
+
+\begin{task}{6.8}
+	Låt $G(s)=\laplace g(s)$ och $Y(s)=\laplace y(s) \lra \laplace y'(s)=sY(s)$.
+	\[2(y*g)=y-y'+g\]
+	Laplacetransformera ekvationen:
+	\begin{align*}
+	&2Y(s)G(s)=Y(s)-sY(s)+G(s) \lra
+	2\frac{1}{s+1}Y(s)=(1-s)Y(s)+\frac{1}{s+1} \lra \\ \lra
+	&\left(\frac{2}{s+1}-1+s\right)Y(s)=\frac{1}{s+1} \lra
+	\frac{2-(s+1)+s(s+1)}{s+1}Y(s)=\frac{1}{s+1} \lra \\ \lra
+	&\frac{s^2+1}{s+1}Y(s)=\frac{1}{s+1} \lra
+	Y(s)=\frac{1}{s^2+1}
+	\end{align*}
+	Hitta inversen:
+	\begin{align*}
+	\laplace^{-1}Y(t)=y(t)=\sin(t)\theta(t)
+	\end{align*}
+	\ans $y(t)=\sin(t)\theta(t)$
+\end{task}
