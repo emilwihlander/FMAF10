@@ -134,3 +134,17 @@
 	\end{align*}
 	\ans $f*g(t)=\frac{1}{4}(e^{-t}-(2t+1)e^{-3t})\theta(t)$
 \end{task}
+
+\begin{task}{6.7}
+	\begin{align*}
+	\laplace (u*u)(s)=
+	&\laplace u(s)\*\laplace u(s)=
+	(\laplace u(s))^2=
+	\frac{6}{(s+1)^4} \lra \\ \lra
+	\laplace u(s)=
+	&\pm\frac{\sqrt{6}}{(s+1)^2}=
+	\pm\sqrt{6}\frac{1}{(s+1)^2}\llra
+	\pm\sqrt{6}te^{-t}\theta(t)
+	\end{align*}
+	\ans $u(t)=\pm\sqrt{6}te^{-t}\theta(t)$
+\end{task}
