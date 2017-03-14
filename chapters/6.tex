@@ -167,3 +167,33 @@
 	\end{align*}
 	\ans $y(t)=\sin(t)\theta(t)$
 \end{task}
+
+\begin{task}{6.9 a)}
+	Låt $Y(s)=\laplace(\theta y)(s)$.
+	\[\laplace(\theta y'')(s)=s\laplace(\theta y')(s)-y'(0)=s(s\laplace(\theta y)(s)-y(0))-y'(0)=s^2Y(s)\]
+	Multiplicera ekvationen med $\theta(t)$ och Laplacetransformera den:
+	\begin{align*}
+	&s^2Y(s)+Y(s)=F(s) \lra
+	(s^2+1)Y(s)=F(s) \lra
+	Y(s)=\frac{1}{s^2+1}F(s)
+	\end{align*}
+	\ans $Y(s)=\dfrac{1}{s^2+1}F(s)$
+\end{task}
+
+
+\begin{task}{b)}
+	\[Y(s)=\frac{1}{s^2+1}F(s)\]
+	Låt $H(s)=\laplace (h\theta)(s)=\dfrac{1}{s^2+1}$.
+	\[h(t)\theta(t)=\sin(t)\theta(t) \lra h(t)=\sin(t)\cond{t > 0}\]
+	Hitta inversen till ekvationen:
+	\begin{align*}
+	y(t)\theta(t)=(h*f(t))\theta(t)
+	\end{align*}
+	Använd definitionen av kausal faltning:
+	\begin{align*}
+	y(t)=
+	\int_{0}^{t}\!h(t-\tau)f(t)\, d\tau=
+	\int_{0}^{t}\!\sin(t-\tau)f(t)\, d\tau\cond{t>0}
+	\end{align*}
+	\ans $y(t)=\int_{0}^{t}\!\sin(t-\tau)f(t)\, d\tau\cond{t>0}$
+\end{task}
