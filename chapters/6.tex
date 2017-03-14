@@ -67,3 +67,21 @@
 	\[(f\theta)*(g\theta)(t)=
 	\left(\int_{0}^{t}\!f(t-\tau)g(\tau)\, d\tau\right)\theta(t)\]
 \end{task}
+
+\begin{task}{6.4 c)}
+	Utnyttja definitionen av Laplacetransformen och faltning:
+	\begin{align*}
+	\laplace(f*g)(s)=
+	&\int_{-\infty}^{+\infty}\!e^{-st}\left(\int_{-\infty}^{+\infty}\!f(t-\tau)g(\tau)\,d\tau\right)dt=
+	\int_{-\infty}^{+\infty}\!\left(\int_{-\infty}^{+\infty}\!e^{-st}f(t-\tau)g(\tau)\,dt\right)d\tau= \\ =
+	&\int_{-\infty}^{+\infty}\!e^{-s\tau}g(\tau)\left(\int_{-\infty}^{+\infty}\!e^{-s(t-\tau)}f(t-\tau)\,dt\right)d\tau=
+	\begin{bmatrix}
+	u=t-\tau \\
+	du=dt
+	\end{bmatrix}= \\ =
+	&\int_{-\infty}^{+\infty}\!e^{-s\tau}g(\tau)\left(\int_{-\infty}^{+\infty}\!e^{-su}f(u)\,du\right)d\tau=
+	\int_{-\infty}^{+\infty}\!e^{-s\tau}g(\tau)\laplace f(s)\, d\tau= \\ =
+	&\laplace f(s)\int_{-\infty}^{+\infty}\!e^{-s\tau}g(\tau)\, d\tau=
+	\laplace f(s)\*\laplace g(s)\mproof
+	\end{align*}
+\end{task}
