@@ -198,6 +198,7 @@
 	\ans $y(t)=\int_{0}^{t}\!\sin(t-\tau)f(t)\, d\tau\cond{t>0}$
 \end{task}
 
+\pagebreak
 \begin{task}{6.10}
 	Låt $G(s)=\laplace(\cos\theta)(s)$ och $F(s)=\laplace(f\theta)(s)$.
 	\[G(s)=\frac{s}{s^2+1}\]
@@ -242,4 +243,43 @@
 	\[f(t)\theta(t)=\frac{1}{2}\left(1+3\cos(2t)\right)\theta(t)\lra
 	f(t)=\frac{1}{2}\left(1+3\cos(2t)\right)\cond{t>0}\]
 	\ans $f(t)=\frac{1}{2}\left(1+3\cos(2t)\right)\cond{t>0}$
+\end{task}
+
+\pagebreak
+\begin{task}{6.11}
+	Genom att sätta $t=0$ fås begynnelsevärdet:
+	\[y(0)+\int_{0}^{0}\!e^{\tau}y(\tau)\,d\tau=1 \lra
+	y(0)=1\]
+	Låt $f(t)=e^{-t}$ vilket medför:
+	\[\int_{0}^{t}\!e^{-(t-\tau)}y(\tau)\,d\tau=
+	\int_{0}^{t}\!f(t-\tau)y(\tau)\,d\tau=
+	f(t)\theta(t)*y(t)\theta(t)\]
+	Multiplicera ekvationen med $\theta(t)$ (notera att $\theta(t)\*\theta(t)=\theta(t)$):
+	\[y(t)\theta(t)+f(t)\theta(t)*y(t)\theta(t)=\theta(t)\]
+	Låt $Y(s)=\laplace(y\theta)(s)$ och $F(s)=\laplace(f\theta)(s)=\frac{1}{s+1}$ och Laplacetransformera ekvationen:
+	\begin{align*}
+	&Y(s)+F(s)\*Y(s)=\frac{1}{s} \lra
+	(1+F(s))Y(s)=\frac{1}{s} \lra \\ \lra
+	&Y(s)=
+	\frac{1}{(1+F(s))s}=
+	\frac{1}{(1+\frac{1}{s+1})s}=
+	\frac{1}{\frac{(s+2)s}{s+1}}=
+	\frac{s+1}{(s+2)s}=
+	\frac{1}{2}\*\frac{1}{s}+\frac{1}{2}\*\frac{1}{s+2}
+	\end{align*}
+	Hitta den inversa Laplacetransformen:
+	\begin{align*}
+	y(t)\theta(t)=\frac{1}{2}(\theta(t)+e^{-2t}\theta(t))=\frac{1}{2}(1+e^{-2t})\theta(t)
+	\end{align*}
+	Vilket ger:
+	\begin{align*}
+	y(t)=\frac{1}{2}(1+e^{-2t})\cond{t>0}
+	\end{align*}
+	Se om begynnelsevärdet matchar det som togs fram i början:
+	\begin{align*}
+	y(0)=\frac{1}{2}(1+e^{0})=\frac{2}{2}=1
+	\end{align*}
+	Det matchar och funktionen är alltså även definierad för $t=0$.
+	
+	\ans $y(t)=\frac{1}{2}(1+e^{-2t})\cond{t\ge0}$
 \end{task}
