@@ -215,17 +215,17 @@
 	och $\theta(t)\llra \frac{1}{s}\cond{\Re s > 0}$.
 	
 	Låt $f_1(t)=\theta(t-1)$ och $f_2(t)=\theta(t-2)$.
-	\[\laplace f_1(s) = \frac{e^{-t}}{s}\cond{\Re s > 0}\]
-	\[\laplace f_2(s) = \frac{e^{-2t}}{s}\cond{\Re s > 0}\]
+	\[\laplace f_1(s) = \frac{e^{-s}}{s}\cond{\Re s > 0}\]
+	\[\laplace f_2(s) = \frac{e^{-2s}}{s}\cond{\Re s > 0}\]
 	\begin{align*}
 	u(t)=
 	&\theta(t)-2\theta(t-1)+\theta(t-2) \llra
 	\laplace\theta(s)-2\laplace f_1(s)+\laplace f_2(s)= \\ =
-	&\frac{1}{s}-2\frac{e^{-t}}{s}+\frac{e^{-2t}}{s}=
-	\frac{1}{s}((e^{-t})^2-2e^{-t}+1^2)=
-	\frac{1}{s}(e^{-t}-1)^2
+	&\frac{1}{s}-2\frac{e^{-s}}{s}+\frac{e^{-2s}}{s}=
+	\frac{1}{s}((e^{-s})^2-2e^{-s}+1^2)=
+	\frac{1}{s}(e^{-s}-1)^2
 	\end{align*}
-	\ans $\laplace u(s) = \dfrac{1}{s}(e^{-t}-1)^2$
+	\ans $\laplace u(s) = \dfrac{1}{s}(e^{-s}-1)^2$
 \end{task}
 
 \begin{task}{3.6}
@@ -317,15 +317,15 @@
 	\laplace g(s)=
 	&-\frac{d}{ds}\laplace f(s)=
 	-\frac{d}{ds}\frac{1}{s^2+1}=
-	\frac{-2s}{(s^2+1)^2}\cond{\Re s > 0}
+	\frac{2s}{(s^2+1)^2}\cond{\Re s > 0}
 	\end{align*}
 	\begin{align*}
 	\laplace h(s)=
 	&e^{-s}\laplace g(s)=
-	e^{-s}\frac{-2s}{(s^2+1)^2}=
-	\frac{-2se^{-s}}{(s^2+1)^2}\cond{\Re s > 0}
+	e^{-s}\frac{2s}{(s^2+1)^2}=
+	\frac{2se^{-s}}{(s^2+1)^2}\cond{\Re s > 0}
 	\end{align*}
-	\ans $(t-1)\sin(t-1)\theta(t-1) \llra \dfrac{-2se^{-s}}{(s^2+1)^2}\cond{\Re s > 0}$
+	\ans $(t-1)\sin(t-1)\theta(t-1) \llra \dfrac{2se^{-s}}{(s^2+1)^2}\cond{\Re s > 0}$
 \end{task}
 
 \begin{task}{c)}
